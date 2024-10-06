@@ -1,0 +1,89 @@
+###############################################################################
+## Bazel Configuration Flags
+##
+## `.bazelrc` is a Bazel configuration file.
+## https://bazel.build/docs/best-practices#bazelrc-file
+###############################################################################
+
+# Required on windows
+# https://bazel.build/reference/command-line-reference#flag--enable_platform_specific_config
+common --enable_platform_specific_config
+
+###############################################################################
+## Build configuration
+###############################################################################
+
+# Don't create bazel-* symlinks in the WORKSPACE directory.
+# Instead, set a prefix and put it in .gitignore
+build --symlink_prefix=target-bzl/
+
+# Non-empty glob test is disabled because some Bazels deps fail the test.
+# build --incompatible_disallow_empty_glob
+
+# This flag improves execution throughput by executing more actions in parallel.
+build --jobs=32
+
+###############################################################################
+## Test configuration
+###############################################################################
+
+# Reduce test output to just error cases and report timeout warnings.
+test --test_output=errors
+test --verbose_failures
+
+###############################################################################
+## Common configuration
+###############################################################################
+
+# Enable Bzlmod for every Bazel command
+common --enable_bzlmod
+
+# Write build outputs in a platform-specific directory;
+# avoid outputs being wiped and rewritten when switching between platforms.
+common --experimental_platform_in_output_dir
+
+# Enable proto toolchain resolution
+common --incompatible_enable_proto_toolchain_resolution
+
+# Enable misc. performance optimizations.
+# https://www.buildbuddy.io/blog/debugging-slow-bazel-builds/
+# https://www.buildbuddy.io/blog/how-bazel-7-0-makes-your-builds-faster/
+common --nolegacy_important_outputs
+common --verbose_failures
+common --noexperimental_merged_skyframe_analysis_execution
+common --reuse_sandbox_directories
+
+# Enable a more detailed performance profile
+common --noslim_profile
+common --experimental_profile_include_target_label
+common --experimental_profile_include_primary_output
+
+###############################################################################
+## Cross compilation configuration
+###############################################################################
+
+# Debug toolchain resolution
+# build --toolchain_resolution_debug='@bazel_tools//tools/cpp:toolchain_type
+
+# Required to resolve C/C++ toolchain.
+# https://github.com/bazel-contrib/musl-toolchain?tab=readme-ov-file#setup
+build --incompatible_enable_cc_toolchain_resolution
+
+# Required for cargo_build_script support before Bazel 7
+build --incompatible_merge_fixed_and_default_shell_env
+
+# This may causes error on RBE that are hard to debug and cannot be replicated locally.
+# If set to true, do not mount root, only mount whats provided with sandbox_add_mount_pair.
+# Input files will be hardlinked to the sandbox instead of symlinked to from the sandbox.
+# If action input files are located on a filesystem different from the sandbox, then the input files will be copied instead.
+# https://bazel.build/reference/command-line-reference#flag--experimental_use_hermetic_linux_sandbox
+# common --experimental_use_hermetic_linux_sandbox
+
+###############################################################################
+## Custom user flags
+##
+## This should always be the last thing in the `.bazelrc` file to ensure
+## consistent behavior when setting flags in that file as `.bazelrc` files are
+## evaluated top to bottom.
+###############################################################################
+try-import %workspace%/user.bazelrc
