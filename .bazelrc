@@ -66,7 +66,7 @@ common --experimental_profile_include_primary_output
 ###############################################################################
 
 # Debug toolchain resolution
-build --toolchain_resolution_debug='@bazel_tools//tools/cpp:toolchain_type
+# build --toolchain_resolution_debug='@bazel_tools//tools/cpp:toolchain_type
 
 # Required to resolve C/C++ toolchain.
 # https://github.com/bazel-contrib/musl-toolchain?tab=readme-ov-file#setup
@@ -75,11 +75,15 @@ build --incompatible_enable_cc_toolchain_resolution
 # Required for cargo_build_script support before Bazel 7
 build --incompatible_merge_fixed_and_default_shell_env
 
-# Enable cross compilation for extra platforms
+# Enable cross compilation for extra platforms.
+# See //build/platforms/BUILD.bazel for definitions.
 build --extra_execution_platforms=//build/platforms:linux-x86_64
 build --extra_execution_platforms=//build/platforms:linux-aarch64
+build --extra_execution_platforms=//build/platforms:darwin-x86_64
+build --extra_execution_platforms=//build/platforms:darwin-aarch64
 
 # Add extra toolchains for cross compilation
+# See MODULE.bazel for details.
 build --extra_toolchains=@llvm_toolchain_x86_with_sysroot//:cc-toolchain-x86_64-linux
 build --extra_toolchains=@llvm_toolchain_aarch64_with_sysroot//:cc-toolchain-aarch64-linux
 
