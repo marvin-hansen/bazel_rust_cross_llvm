@@ -79,8 +79,7 @@ build --incompatible_merge_fixed_and_default_shell_env
 # See //build/platforms/BUILD.bazel for definitions.
 build --extra_execution_platforms=//build/platforms:linux-x86_64
 build --extra_execution_platforms=//build/platforms:linux-aarch64
-build --extra_execution_platforms=//build/platforms:darwin-x86_64
-build --extra_execution_platforms=//build/platforms:darwin-aarch64
+# build --extra_execution_platforms=//build/platforms:darwin-aarch64
 
 # Add extra toolchains for cross compilation
 # See MODULE.bazel for details.
