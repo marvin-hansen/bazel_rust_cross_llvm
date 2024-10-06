@@ -13357,7 +13357,7 @@
     "@@toolchains_llvm~//toolchain/extensions:llvm.bzl%llvm": {
       "general": {
         "bzlTransitiveDigest": "fGPyr+7psAXEyL7zsvVsrVKES6+tT7A2w8oIztjS82k=",
-        "usagesDigest": "6WBKRyJG6a/zvo20fR38JD6PyEbOj8lrNVrA2aGHcWA=",
+        "usagesDigest": "aql+x8NSUywP+oEUzDNqLgUbHYyBAnYQncYLsmL9ibA=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -13392,7 +13392,7 @@
               "unfiltered_compile_flags": {},
               "toolchain_roots": {},
               "sysroot": {
-                "linux_x86_64_musl": "'@@_main~_repo_rules~org_chromium_sysroot_linux_x64//:sysroot'"
+                "linux-x86_64": "'@@_main~_repo_rules~org_chromium_sysroot_linux_x64//:sysroot'"
               }
             }
           },
@@ -13479,7 +13479,7 @@
               "unfiltered_compile_flags": {},
               "toolchain_roots": {},
               "sysroot": {
-                "linux_arm64_musl": "'@@_main~_repo_rules~org_chromium_sysroot_linux_aarch64//:sysroot'"
+                "linux-aarch64": "'@@_main~_repo_rules~org_chromium_sysroot_linux_aarch64//:sysroot'"
               }
             }
           },

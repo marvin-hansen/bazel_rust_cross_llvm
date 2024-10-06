@@ -75,6 +75,13 @@ build --incompatible_enable_cc_toolchain_resolution
 # Required for cargo_build_script support before Bazel 7
 build --incompatible_merge_fixed_and_default_shell_env
 
+# Cross compilation toolchains
+build --platforms=@toolchains_llvm//platforms:linux-x86_64
+build --platforms=@toolchains_llvm//platforms:linux-aarch64
+
+build --extra_execution_platforms=//build/platforms:linux-x86_64
+build --extra_execution_platforms=//build/platforms:linux-aarch64
+
 # This may causes error on RBE that are hard to debug and cannot be replicated locally.
 # If set to true, do not mount root, only mount whats provided with sandbox_add_mount_pair.
 # Input files will be hardlinked to the sandbox instead of symlinked to from the sandbox.
