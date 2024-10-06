@@ -18,7 +18,7 @@ rust_binary(
             # External crates
             "//thirdparty/crates:mimalloc",
             "//thirdparty/crates:lz4-sys",
-             ],
+        ],
 )
 
 rust_binary(
@@ -29,7 +29,7 @@ rust_binary(
             # External crates
             "//thirdparty/crates:mimalloc",
             "//thirdparty/crates:lz4-sys",
-             ],
+        ],
 )
 
 rust_binary(
@@ -40,7 +40,7 @@ rust_binary(
             # External crates
             "//thirdparty/crates:mimalloc",
             "//thirdparty/crates:lz4-sys",
-             ],
+        ],
 )
 
 # Test if the host binary works.
