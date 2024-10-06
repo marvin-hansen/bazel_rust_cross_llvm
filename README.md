@@ -10,6 +10,10 @@ The example code is setup to cross compile from the following hosts to the the f
 * {darwin, aarch64 (Apple Silicon)} -> {linux, x86_64}
 * {darwin, aarch64 (Apple Silicon)} -> {linux, aarch64}
 
+## PC Linux hosts
+
+When you run linux on either Intel, AMD, or ARM64, you can compile and run the example in the following way:
+
 You cross-compile by calling the target.
 
 `bazel build //:hello_world_x86_64`
@@ -29,260 +33,27 @@ And you can run all test with:
 `bazel test //...`
 
 
-## Setup
+## Apple hosts
 
-The setup requires three steps, first declare dependencies and toolchains in your MODULE.bazel, second configure LLVM and Rust for cross compilation, and third the configuration of the cross compilation platforms so you can use it binary targets.
+When you compile this repo from an Apple Computer, you need to add an additional flag depending on your system:
 
-### Dependencies Configuration
+**Apple Silicon Macs**
 
-You add the required rules for cross compilation to your MODULE.bazel as shown below.
-
-```Starlark
-# Rules for cross compilation
-# https://github.com/bazelbuild/platforms/releases
-bazel_dep(name = "platforms", version = "0.0.10")
-# https://github.com/bazel-contrib/toolchains_llvm
-bazel_dep(name = "toolchains_llvm", version = "1.0.0")
+```bash
+bazel build //... --extra_execution_platforms=//build/platforms:darwin-aarch64
+bazel test //... --extra_execution_platforms=//build/platforms:darwin-aarch64
 ```
 
-## LLVM Configuration
+**Intel Macs**
 
-Next, you have to configure the LLVM toolchain because rules_rust still needs a cpp toolchain for cross compilation and
-you have to add the specific platform triplets to the Rust toolchain. Suppose you want to compile a Rust binary that
-supports linux on both, X86 and ARM. In that case, you have to setup three LLVM toolchains:
-
-1) LLVM for the host
-2) LLVM for X86
-3) LLVM for ARM (aarch64)
-
-For the host LLVM, you just specify a LLVM version and then register the toolchain as usual. The target LLVM toolchains,
-however, have dependencies on system libraries for the target platform. Therefore, it is required to download a so-
-called sysroot that contains a root file system with all those system libraries for the specific target platform.
-To do so, please add the following to your MODULE.bazel
-
-```Starlark
-# https://github.com/bazelbuild/bazel/blob/master/tools/build_defs/repo/http.bzl
-http_archive = use_repo_rule("@bazel_tools//:http.bzl", "http_archive")
-
-# Both, cross compilation and MUSL still need a C/C++ toolchain with sysroot.
-_BUILD_FILE_CONTENT = """
-filegroup(
-  name = "{name}",
-  srcs = glob(["*/**"]),
-  visibility = ["//visibility:public"],
-)
-"""
-
-# Download sysroot
-# https://commondatastorage.googleapis.com/chrome-linux-sysroot/
-http_archive(
-    name = "org_chromium_sysroot_linux_x64",
-    build_file_content = _BUILD_FILE_CONTENT.format(name = "sysroot"),
-    sha256 = "f6b758d880a6df264e2581788741623320d548508f07ffc2ae6a29d0c13d647d",
-    urls = ["https://commondatastorage.googleapis.com/chrome-linux-sysroot/toolchain/2e7ada854015a4cc60fc812112d261af44213ed0/debian_bullseye_amd64_sysroot.tar.xz"],
-)
-
-http_archive(
-    name = "org_chromium_sysroot_linux_aarch64",
-    build_file_content = _BUILD_FILE_CONTENT.format(name = "sysroot"),
-    sha256 = "902d1a40a5fd8c3764a36c8d377af5945a92e3d264c6252855bda4d7ef81d3df",
-    urls = ["https://commondatastorage.googleapis.com/chrome-linux-sysroot/toolchain/41a6c8dec4c4304d6509e30cbaf9218dffb4438e/debian_bullseye_arm64_sysroot.tar.xz"],
-)
+```bash
+bazel build //... --extra_execution_platforms=//build/platforms:darwin-x86_64
+bazel test //... --extra_execution_platforms=//build/platforms:darwin-x86_64
 ```
 
-Here, we declare to new http downloads that retrieve the sysroot for linux_x64 (Intel/AMD) and linux_aarch64 (ARM/Apple Silicon). Note, these are only
-sysroots, that means you have to configure LLVM next to use these files. As mentioned earlier, three LLVM toolchains
-needs to be configured and to do that, please add the following to your MODULE.bazel
-
-```Starlark
-LLVM_VERSIONS = {
-    "": "16.0.0",
-}
-
-# Host LLVM toolchain.
-llvm.toolchain(
-    name = "llvm_toolchain",
-    llvm_versions = LLVM_VERSIONS,
-)
-use_repo(llvm, "llvm_toolchain", "llvm_toolchain_llvm")
-
-# X86 LLVM Toolchain with sysroot.
-# https://github.com/bazel-contrib/toolchains_llvm/blob/master/tests/WORKSPACE.bzlmod
-llvm.toolchain(
-    name = "llvm_toolchain_x86_with_sysroot",
-    llvm_versions = LLVM_VERSIONS,
-)
-llvm.sysroot(
-    name = "llvm_toolchain_x86_with_sysroot",
-    label = "@org_chromium_sysroot_linux_x64//:sysroot",
-    targets = ["linux-x86_64"],
-)
-use_repo(llvm, "llvm_toolchain_x86_with_sysroot")
-
-#
-# ARM (aarch64) LLVM Toolchain with sysroot.
-# https://github.com/bazelbuild/rules_rust/blob/main/examples/bzlmod/cross_compile/WORKSPACE.bzlmod
-llvm.toolchain(
-    name = "llvm_toolchain_aarch64_with_sysroot",
-    llvm_versions = LLVM_VERSIONS,
-)
-llvm.sysroot(
-    name = "llvm_toolchain_aarch64_with_sysroot",
-    label = "@org_chromium_sysroot_linux_aarch64//:sysroot",
-    targets = ["linux-aarch64"],
-)
-use_repo(llvm, "llvm_toolchain_aarch64_with_sysroot")
-
-# Register all LLVM toolchains
-register_toolchains("@llvm_toolchain//:all")
-```
-
-For simplicity, all toolchains are pinned to version LLVM 16 because it is one of the few releases that supports the
-host (apple-darwin / Ubuntu), and the two targets. For a
-complete [list off all LLVM releases and supported platforms, see this list.](https://github.com/bazel-contrib/toolchains_llvm/blob/master/toolchain/internal/llvm_distributions.bzl)
-It is possible to pin different targets to different LLVM
-versions; [see the documentation for details](https://github.com/bazel-contrib/toolchains_llvm/tree/master?tab=readme-ov-file#per-host-architecture-llvm-version).
-
-If you face difficulties with building LLVM on older linux distros or your CI, 
-please take a look at the [LLVM Troubleshooting guide](LLVM_Troubleshooting.md) for known issues.
-
-
-**Rust Toolchain Configuration**
-
-The Rust toolchain only need to know the additional platform triplets to download the matching toolchains. To do so, add
-or or modify your MODULE.bazel with the following entry:
-
-```Starlark
-# Rust toolchain
-RUST_EDITION = "2021"
-RUST_VERSION = "1.79.0"
-
-rust = use_extension("@rules_rust//rust:extensions.bzl", "rust")
-rust.toolchain(
-    edition = RUST_EDITION,
-    versions = [RUST_VERSION],
-    extra_target_triples = [
-        "aarch64-unknown-linux-gnu",
-        "x86_64-unknown-linux-gnu",
-    ],
-)
-use_repo(rust, "rust_toolchains")
-register_toolchains("@rust_toolchains//:all")
-```
-
-You find the exact platform triplets in
-the [Rust platform support documentation](https://doc.rust-lang.org/nightly/rustc/platform-support.html).
-Next, you have to configure the target platform.
-
-**Platform Configuration**
-
-Once the dependencies are loaded, create an empty BUILD file to define the cross compilation toolchain targets.
-As mentioned earlier, it is best practice to put all custom rules, toolchains, and platform into one folder.
-Suppose you have the empty BUILD file in the following path:
-
-`build/platforms/BUILD.bazel`
-
-Then you add the following content to the BUILD file:
-
-```Starlark
-package(default_visibility = ["//visibility:public"])
-
-platform(
-    name = "linux-aarch64",
-    constraint_values = [
-        "@platforms//os:linux",
-        "@platforms//cpu:aarch64",
-    ],
-)
-
-platform(
-    name = "linux-x86_64",
-    constraint_values = [
-        "@platforms//os:linux",
-        "@platforms//cpu:x86_64",
-    ],
-)
-```
-
-The default visibility at the top of the file means that all targets in this BUILD file will be public by default, which
-is sensible because cross-compilation targets are usually used across the entire project.
-
-It is important to recognize that the platform rules use the constraint values to map those constraints to the target
-triplets of the Rust toolchain. If you somehow see errors that says some crate couldn't be found with triple xyz, then
-one of two things happened.
-
-Either you forgot to add a triple to the Rust toolchain. Unfortunately, the error message
-doesn't always tell you the correct triple that is missing. However, in that case you have to double check if for each
-specified platform a corresponding Rust extra_target_triples has been added. If one is missing, add it and the error
-goes away.
-
-A second source of error is if the platform declaration contains a typo, for example,
-cpu:arch64 instead of cpu:aarch64. You have to be meticulous in the platform declaration to make everything work
-smoothly.
-
-With the platform configuration out of the way, you are free to configure your binary targets for the specified
-platforms.
-
-## Usage
-
-Suppose you have a simple hello world that is defined in a single main.rs file. Conventionally, you declare a minimum
-binary target as shown below.
-
-```Starlark
-load("@rules_rust//rust:defs.bzl", "rust_binary")
-
-rust_binary(
-    name = "hello_world_host",
-    srcs = ["src/main.rs"],
-    deps = [],
-)
-```
-
-Bazel compiles this target to the same platform as the host. To cross-compile the same source file to a different
-platform, you simply add one of the platforms previously declared, as shown below.
-
-```Starlark
-load("@rules_rust//rust:defs.bzl", "rust_binary")
-
-rust_binary(
-    name = "hello_world_x86_64",
-    srcs = ["src/main.rs"],
-    platform = "//build/platforms:linux-x86_64",
-    deps = [],
-)
-
-rust_binary(
-    name = "hello_world_aarch64",
-    srcs = ["src/main.rs"],
-    platform = "//build/platforms:linux-aarch64",
-    deps = [],
-)
-```
-
-You then cross-compile by calling the target.
-
-`bazel build //:hello_world_x86_64`
-
-or
-
-`bazel build //:hello_world_aarch64`
-
-You may have to make the target public when see an access error.
-
-However, when you build for multiple targets, it is sensible to group all of them in a filegroup.
-
-```Starlark
-filegroup(
-    name = "all",
-    srcs = [
-        ":hello_world_host",
-        ":hello_world_x86_64",
-        ":hello_world_aarch64",
-    ],
-    visibility = ["//visibility:public"],
-)
-```
-
-Then you build for all platforms by calling the filegroup target:
-
-`bazel build //:all`
+Background is, if you were to set these flags in the .bazelrc file, 
+you would need to specify the platform in the `--extra_execution_platforms` flag for which
+you would have to declare an Apple LLVM toolchain and install the Apple XCode tools on all potential hosts including linux.
+This is impractical when your CI is running on linux, but some team members use Macbooks for development.
+Instead, you can just wrap the Bazel build, run, and test commands in a script on a Mac and just append these flags
+so that all targets are built and tested while your CI and remaining teams remains unaffected.
