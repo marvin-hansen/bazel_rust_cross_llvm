@@ -29,7 +29,7 @@ http_archive = use_repo_rule("@bazel_tools//:http.bzl", "http_archive")
 # LLVM Versions and platforms
 # https://github.com/bazel-contrib/toolchains_llvm/blob/master/toolchain/internal/llvm_distributions.bzl
 LLVM_VERSIONS = {
-    "": "16.0.0",  # Linux X86
+    "": "19.1.0",  # Linux X86
     "darwin-aarch64": "19.1.0",  # Apple Silicon Macs
 }
 
