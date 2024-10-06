@@ -5,6 +5,7 @@ For cross compilation, you have to specify a custom platform to let Bazel know t
 The example code is setup to cross compile from the following hosts to the the following targets:
 
 * {linux, x86_64} -> {linux, aarch64}
+* {linux, aarch64} -> {linux, x86_64}
 * {darwin, x86_64} -> {linux, x86_64}
 * {darwin, x86_64} -> {linux, aarch64}
 * {darwin, aarch64 (Apple Silicon)} -> {linux, x86_64}
@@ -56,4 +57,4 @@ you would need to specify the platform in the `--extra_execution_platforms` flag
 you would have to declare an Apple LLVM toolchain and install the Apple XCode tools on all potential hosts including linux.
 This is impractical when your CI is running on linux, but some team members use Macbooks for development.
 Instead, you can just wrap the Bazel build, run, and test commands in a script on a Mac and just append these flags
-so that all targets are built and tested while your CI and remaining teams remains unaffected.
+so that all targets are built and tested while your CI and remaining team remains unaffected.
