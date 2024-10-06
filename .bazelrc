@@ -63,7 +63,7 @@ common --experimental_profile_include_primary_output
 ###############################################################################
 
 # Debug toolchain resolution
-# build --toolchain_resolution_debug='@bazel_tools//tools/cpp:toolchain_type
+build --toolchain_resolution_debug='@bazel_tools//tools/cpp:toolchain_type
 
 # Required to resolve C/C++ toolchain.
 # https://github.com/bazel-contrib/musl-toolchain?tab=readme-ov-file#setup
