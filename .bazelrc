@@ -38,6 +38,9 @@ test --verbose_failures
 # Enable Bzlmod for every Bazel command
 common --enable_bzlmod
 
+# Allow + in repo names for Bazel 8
+# common --incompatible_use_plus_in_repo_names
+
 # Write build outputs in a platform-specific directory;
 # avoid outputs being wiped and rewritten when switching between platforms.
 common --experimental_platform_in_output_dir

@@ -31,18 +31,6 @@ filegroup(
 
 # Workspace Member Dependencies
 alias(
-    name = "diesel",
-    actual = "//thirdparty/crates/diesel-2.2.4:diesel",
-    tags = ["manual"],
-)
-
-alias(
-    name = "diesel_migrations",
-    actual = "//thirdparty/crates/diesel_migrations-2.2.0:diesel_migrations",
-    tags = ["manual"],
-)
-
-alias(
     name = "lz4-sys",
     actual = "//thirdparty/crates/lz4-sys-1.11.1-lz4-1.10.0:lz4_sys",
     tags = ["manual"],
