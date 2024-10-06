@@ -1,0 +1,47 @@
+load("@rules_rust//crate_universe:defs.bzl", "crate", "crates_vendor")
+
+crates_vendor(
+    name = "crates_vendor",
+    annotations = {
+        "pq-sys": [
+            crate.annotation(
+                build_script_env = {
+                    "PQ_LIB_STATIC": "1",
+                },
+                data = ["@@libpq~~_repo_rules~postgres//:libpq"],
+                rustc_flags = [
+                    "-L",
+                    "$(BINDIR)/external/libpq~~_repo_rules~postgres",
+                ],
+            ),
+        ],
+    },
+    mode = "local",
+    packages = {
+        "mimalloc": crate.spec(
+            package = "mimalloc",
+            version = "0.1.43",
+        ),
+        "lz4-sys": crate.spec(
+            package = "lz4-sys",
+            version = "1.11.1",
+        ),
+        "diesel": crate.spec(
+            default_features = False,
+            features = [
+                "postgres",
+                "r2d2",
+            ],
+            package = "diesel",
+            version = "2.2.4",
+        ),
+        "diesel_migrations": crate.spec(
+            default_features = False,
+            features = ["postgres"],
+            package = "diesel_migrations",
+            version = "2.2.0",
+        ),
+    },
+    repository_name = "queng_vendored",
+    tags = ["manual"],
+)
