@@ -14,6 +14,6 @@ crates_vendor(
             version = "1.11.1",
         ),
     },
-    repository_name = "queng_vendored",
+    repository_name = "vendored",
     tags = ["manual"],
 )
