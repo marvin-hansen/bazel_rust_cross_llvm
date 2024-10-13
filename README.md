@@ -37,7 +37,7 @@ This tests if each binary has been compiled for the correct platform.
 
 The example comes already pre-configured with a generic sysroot for Linux on Intel and ARM that should cover the most common uses cases. See the LLVM section in MODULE.bazel for details. 
 
-If you need a custom sysroot i.e. to cross compile system dependencies such as openssl, postgres or similar, read through the excellent tutorial by Steven Casagrande:
+If you need a custom sysroot i.e. to cross compile system dependencies such as openssl or similar, read through the excellent tutorial by Steven Casagrande:
 
 https://steven.casagrande.io/posts/2024/sysroot-generation-toolchains-llvm/
 
@@ -72,7 +72,7 @@ This repository comes with two additional branches that are still work in progre
 may not work:
 
 * `small-clang`: Replaces the full LLVM toolchain with a smaller version that only contains CLang and a few tools.
-* `llvm_musl`: Only declared a small clang toolchain and uses MUSL to cross compile all other targets.
+* `llvm_musl`: Only declares a small host clang toolchain and uses MUSL to cross compile all other targets.
 
 The motivation for small-clang is that it is a much smaller toolchain, about only 10% the size of the full llvm toolchain
 and therefore reduces download times especially on clean CI builds.
