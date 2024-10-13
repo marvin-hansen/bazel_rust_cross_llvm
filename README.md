@@ -65,3 +65,25 @@ work out of the box on all supported platforms.
 Conventionally, postgres would require a sysroot, but the pg-sys module vendors and patches libpq 16.4 
 so that it can be statically linked and cross compiled with any recent C compiler. 
 See the [libpq repo](https://github.com/brainhivenl/libpq) for details. 
+
+## Work in progress
+
+This repository comes with two additional branches that are still work in progress and
+may not work:
+
+* `small-clang`: Replaces the full LLVM toolchain with a smaller version that only contains CLang and a few tools.
+* `llvm_musl`: Only declared a small clang toolchain and uses MUSL to cross compile all other targets.
+
+The motivation for small-clang is that it is a much smaller toolchain, about only 10% the size of the full llvm toolchain
+and therefore reduces download times especially on clean CI builds.
+
+The motivation for llvm_musl is that MUSL simply compiles significantly faster than the full llvm toolchain. Ideally,
+MUSL could also be used as host toolchain, but that has been proven complex to configure due to an issue with how
+rules_rules identify the host toolchain on Linux. On MacOS, MUSL works as host toolchain, on Linux (X86_64) it does not,
+hence the need for llvm as host toolchain.
+
+## Unknown / not implemented: Zig hermetic C toolchain.
+
+As stated earlier, all code in this repo cross compiles without a sysroot and only requires 
+a standard C compile i.e. LLVm 15 or newer. Therefore it should be possible to use the Zig C compiler a.k.a 
+the hermetic C toolchain as drop-in replacement for the LLVM toolchain or MUSL.
