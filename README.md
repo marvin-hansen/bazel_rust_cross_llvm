@@ -8,13 +8,12 @@ The example code is setup to cross compile from the following hosts to the the f
 
 * {linux, x86_64} -> {linux, aarch64}
 * {linux, aarch64} -> {linux, x86_64}
-* {darwin, x86_64} -> {linux, x86_64}
-* {darwin, x86_64} -> {linux, aarch64}
 * {darwin, aarch64 (Apple Silicon)} -> {linux, x86_64}
 * {darwin, aarch64 (Apple Silicon)} -> {linux, aarch64}
 
+MacOS on x86_64 (Intel) may work, but has not been tested. 
 
-You cross-compile by calling the target.
+You cross-compile by calling the target for each platform: 
 
 `bazel build //:hello_world_x86_64`
 
@@ -58,4 +57,11 @@ I've added a number of example dependencies already, among others:
 * diesel
 * tokio
 
-Notice, none of these crates actually need a sysroot and you can cross compile all of them with MUSL or the Zig C compiler. Conventionally, postgres would require a sysroot, but the pg-sys vendors and patches libpq so that it can be statically linked and cross compiled with any recent C compiler. See the [libpq repo](https://github.com/brainhivenl/libpq) for details. 
+Notice, none of these crates actually need a sysroot to build so you can cross compile all of them with 
+either LLVM, MUSL or the Zig C compiler a.k.a the hermetic C toolchain. 
+The sysroot is only there to showcase how configure one and to ensure that most dependencies you add over time  
+work out of the box on all supported platforms.
+
+Conventionally, postgres would require a sysroot, but the pg-sys module vendors and patches libpq 16.4 
+so that it can be statically linked and cross compiled with any recent C compiler. 
+See the [libpq repo](https://github.com/brainhivenl/libpq) for details. 
