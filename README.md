@@ -72,7 +72,7 @@ This repository comes with two additional branches that are still work in progre
 may not work:
 
 * `small-clang`: Replaces the full LLVM toolchain with a smaller version that only contains CLang and a few tools.
-* `llvm_musl`: Only declares only a small clang toolchain for the host and uses MUSL to cross compile all other targets.
+* `llvm_musl`: Only declares a small host clang toolchain and uses MUSL to cross compile all other targets.
 
 The motivation for small-clang is that it is a much smaller toolchain, about only 10% the size of the full llvm toolchain
 and therefore reduces download times especially on clean CI builds.
