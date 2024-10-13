@@ -85,5 +85,5 @@ hence the need for llvm as host toolchain.
 ## Unknown / not implemented: Zig hermetic C toolchain.
 
 As stated earlier, all code in this repo cross compiles without a sysroot and only requires 
-a standard C compile i.e. LLVm 15 or newer. Therefore it should be possible to use the Zig C compiler a.k.a 
+a standard C compile i.e. LLVM 15 or newer. Therefore it should be possible to use the Zig C compiler a.k.a 
 the hermetic C toolchain as drop-in replacement for the LLVM toolchain or MUSL.
