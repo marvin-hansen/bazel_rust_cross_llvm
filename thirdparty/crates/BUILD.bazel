@@ -31,6 +31,18 @@ filegroup(
 
 # Workspace Member Dependencies
 alias(
+    name = "diesel",
+    actual = "//thirdparty/crates/diesel-2.2.4:diesel",
+    tags = ["manual"],
+)
+
+alias(
+    name = "diesel_migrations",
+    actual = "//thirdparty/crates/diesel_migrations-2.2.0:diesel_migrations",
+    tags = ["manual"],
+)
+
+alias(
     name = "lz4-sys",
     actual = "//thirdparty/crates/lz4-sys-1.11.1-lz4-1.10.0:lz4_sys",
     tags = ["manual"],
@@ -39,5 +51,17 @@ alias(
 alias(
     name = "mimalloc",
     actual = "//thirdparty/crates/mimalloc-0.1.43:mimalloc",
+    tags = ["manual"],
+)
+
+alias(
+    name = "rustls",
+    actual = "//thirdparty/crates/rustls-0.23.14:rustls",
+    tags = ["manual"],
+)
+
+alias(
+    name = "tokio",
+    actual = "//thirdparty/crates/tokio-1.40.0:tokio",
     tags = ["manual"],
 )

@@ -7,20 +7,17 @@ module(
 # B A Z E L   D E P E N D E N C I E S # https://registry.bazel.build/
 ###############################################################################
 
-# https://github.com/bazelbuild/rules_rust/releases
-# Note, cross compilation with rules_rust 0.52 is currently (Oct/2024) broken on MacOS.
-# See the issue 2917 for details.
-# https://github.com/bazelbuild/rules_rust/issues/2917
 bazel_dep(name = "rules_rust", version = "0.51.0")
-
-# https://github.com/bazelbuild/platforms/releases
 bazel_dep(name = "platforms", version = "0.0.10")
-
-# https://github.com/bazel-contrib/toolchains_llvm
 bazel_dep(name = "toolchains_llvm", version = "1.2.0", dev_dependency = True)
 
-# https://github.com/bazelbuild/bazel/blob/master/tools/build_defs/repo/http.bzl
-http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+# https://github.com/brainhivenl/libpq
+bazel_dep(name = "libpq", version = "0.0.1")
+git_override(
+    module_name = "libpq",
+    commit = "ebdeb0cc9b8e051779e00b37ec0f93fab9ba8dd8",
+    remote = "https://github.com/brainhivenl/libpq",
+)
 
 ###############################################################################
 # LLVM toolchain #
@@ -28,6 +25,7 @@ http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "ht
 
 # INTEL/AMD64 Sysroot. LastModified: 2024-04-26T19:15
 # https://commondatastorage.googleapis.com/chrome-linux-sysroot/
+http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 http_archive(
     name = "sysroot_linux_x64",
     build_file = "//build/sysroot:BUILD.bazel",
