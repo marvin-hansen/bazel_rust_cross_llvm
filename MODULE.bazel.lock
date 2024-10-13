@@ -13247,7 +13247,7 @@
     "@@toolchains_llvm~//toolchain/extensions:llvm.bzl%llvm": {
       "general": {
         "bzlTransitiveDigest": "fGPyr+7psAXEyL7zsvVsrVKES6+tT7A2w8oIztjS82k=",
-        "usagesDigest": "5d/B2tlgNuu/d2KTcqGwerrczWinmg2J2qzilRNBaVA=",
+        "usagesDigest": "iaKH5DozetdlG7ns3YaNabZIk835BIfwRVQaVDNanPk=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -13272,7 +13272,7 @@
               "link_flags": {},
               "link_libs": {},
               "llvm_versions": {
-                "": "19.1.0"
+                "": "18.1.2"
               },
               "opt_compile_flags": {},
               "opt_link_flags": {},
@@ -13299,12 +13299,22 @@
               "exec_arch": "",
               "exec_os": "",
               "llvm_mirror": "",
-              "llvm_version": "19.1.0",
+              "llvm_version": "18.1.2",
               "llvm_versions": {},
               "netrc": "",
-              "sha256": {},
+              "sha256": {
+                "darwin-aarch64": "a6dfd8d98f0753c96e74382f93520ead9ab4c1fa5c52676c6bdbe32cd4fbc89f",
+                "linux-x86_64": "6511968b1b5c4369fe5032c7a470fddc0da290cf740518a5c03c048adc5163c2"
+              },
               "strip_prefix": {},
-              "urls": {}
+              "urls": {
+                "darwin-aarch64": [
+                  "https://github.com/dzbarsky/static-clang/releases/download/v18.1.2-3/darwin_arm64.tar.xz"
+                ],
+                "linux-x86_64": [
+                  "https://github.com/dzbarsky/static-clang/releases/download/v18.1.2-3/linux_amd64.tar.xz"
+                ]
+              }
             }
           }
         },
