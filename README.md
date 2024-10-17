@@ -1,6 +1,7 @@
 # Cross Compilation
 
-Pure LLVM setup. No MUSL. 
+This branch uses the small LLVM fo the host and MUSL for cross compiling to the targets.
+Note, be mindful as not everything compiles with MUSL, but when it does, it is usually quite a bit faster than LLVM. 
 
 For cross compilation, you have to specify a custom platform to let Bazel know that you are compiling for a different platform than the default host platform.
 
