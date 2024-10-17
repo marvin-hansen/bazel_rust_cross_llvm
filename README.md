@@ -1,5 +1,7 @@
 # Cross Compilation
 
+This config uses the [small LLVM toolchain](https://github.com/MaterializeInc/toolchains) courtesy of [Materialize, Inc](https://materialize.com/).
+
 Pure LLVM setup. No MUSL. 
 
 For cross compilation, you have to specify a custom platform to let Bazel know that you are compiling for a different platform than the default host platform.
