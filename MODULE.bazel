@@ -51,8 +51,8 @@ llvm = use_extension("@toolchains_llvm//toolchain/extensions:llvm.bzl", "llvm")
 llvm.toolchain(
     llvm_version = "18.1.8",
     sha256 = {
-        "darwin-aarch64": "",
-        "linux-x86_64"  : "",
+        "darwin-aarch64": "41d8dea52d18c4e8b90c4fcd31965f9f297df9f40a38a33d60748dbe7f8330b8",
+        "linux-x86_64"  : "8b725ec14e48bc1cb3698309506e29cd94ff3b823976ebb306e9c3ef84480c16",
     },
     stdlib = {
         "linux-x86_64": "stdc++",
@@ -60,7 +60,7 @@ llvm.toolchain(
     },
     urls = {
         "darwin-aarch64": ["https://github.com/MaterializeInc/toolchains/releases/download/clang-18.1.8-4/darwin_aarch64.tar.zst"],
-        "linux-x86_64"  : ["https://github.com/MaterializeInc/toolchains/releases/download/clang-18.1.8-4/darwin_x86_64.tar.zst"],
+        "linux-x86_64": ["https://github.com/MaterializeInc/toolchains/releases/download/clang-18.1.8-4/linux_x86_64.tar.zst"],
     },
 )
 llvm.sysroot(
