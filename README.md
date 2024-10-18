@@ -44,9 +44,9 @@ For example, when targeting linux on Arm, you would add the following to your BU
 
 ```
 platform_transition_binary(
-    name = "hello_world_x86_64",
+    name = "hello_world_aarch64",
     binary = ":hello_world_host",
-    target_platform ="//build/platforms:linux-x86_64",
+    target_platform = "//build/platforms:linux-aarch64",
 )
 ```
 
