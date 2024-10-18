@@ -33,15 +33,44 @@ And you can run all test with:
 
 This tests if each binary has been compiled for the correct platform.
 
-# Sysroot
+## Secure Chainguard Base Image
 
-The example comes already pre-configured with a generic sysroot for Linux on Intel and ARM that should cover the most common uses cases. See the LLVM section in MODULE.bazel for details. 
+Chainguard pioneered the un-distro wolfi and with it the secure base image. Unlike Distroless,
+the Chainguard base image does not have Linux Kernel (one less to patch) 
+is updated within 24 hours whenever one of its dependencies receives an update. [Rules Apko ](https://github.com/chainguard-dev/rules_apko)take the idea 
+one step further and, instead of pulling in an external base image, the base image is updated and build with every
+bazel build thus ensuring the Chainguard base image always comes with the latest libc and all available security patches.
 
-If you need a custom sysroot i.e. to cross compile system dependencies such as openssl or similar, read through the excellent tutorial by Steven Casagrande:
+That means, instead of late patching whenever a new CVE makes headlines, 
+you just rebuild and release with Bazel knowing the latest security patches have already been applied to all of your containers. 
 
-https://steven.casagrande.io/posts/2024/sysroot-generation-toolchains-llvm/
+This demo repo has already configured, built and tested the Chainguard base image for the following target platforms:
+* linux-x86_64, 
+* linux-aarch64
 
-## Dependencies
+The relevant configuration is stored in the `images/base_image/` folder. If you want to customize the base image i.e. adding sys libraries or packages, please refer to the [official documentation](https://github.com/chainguard-dev/rules_apko?tab=readme-ov-file#usage), edit the  `apko.yaml` file and re-generate the lockfile, as shown below.
+
+However, if you ever encounter a build hiccup related to the base image, 
+just regenerate the lock file with the following command:
+
+`
+command bazel run @rules_apko//apko lock images/base_image/apko.yaml
+`
+
+## OCI Multiarch Image
+
+This example contains a multiarch image derived from the host binary using aspects platform transitions.
+For that, a custom rule `build_multi_arch_image` is defined in build/container.bzl. Using this rule means, you define the Rust binary only once for the host platform and this rule does all the heavy lifting for you to create a new binary for each platform and packages them all into a multi-arch OCI image ready to upload to an image registry.
+
+## Sortable OCI image tags
+
+Image tagging comes in two flavors:
+* tag_with_sha265
+* tag_with_commit_and_timestamp
+
+The first one generates a tag with the sha256 hash of the binary. The second one generates a tag with the current (head) git commit and the timestamp of the build. The example configuration the second one, with git hash and timestamp, to support continuous delivery systems that require unique and sortable image tags.
+
+## Rust Dependencies
 
 Rust dependencies are vendored in the thirdparty directory.
 
@@ -65,6 +94,15 @@ work out of the box on all supported platforms.
 Conventionally, postgres would require a sysroot, but the pg-sys module vendors and patches libpq 16.4 
 so that it can be statically linked and cross compiled with any recent C compiler. 
 See the [libpq repo](https://github.com/brainhivenl/libpq) for details. 
+
+## Sysroot
+
+The example comes already pre-configured with a generic sysroot for Linux on Intel and ARM that should cover the most common uses cases. See the LLVM section in MODULE.bazel for details.
+
+If you need a custom sysroot i.e. to cross compile system dependencies such as openssl or similar, read through the excellent tutorial by Steven Casagrande:
+
+https://steven.casagrande.io/posts/2024/sysroot-generation-toolchains-llvm/
+
 
 ## Small LLVM
 

@@ -11,13 +11,16 @@
     "https://bcr.bazel.build/modules/aspect_bazel_lib/1.31.2/MODULE.bazel": "7bee702b4862612f29333590f4b658a5832d433d6f8e4395f090e8f4e85d442f",
     "https://bcr.bazel.build/modules/aspect_bazel_lib/1.38.0/MODULE.bazel": "6307fec451ba9962c1c969eb516ebfe1e46528f7fa92e1c9ac8646bef4cdaa3f",
     "https://bcr.bazel.build/modules/aspect_bazel_lib/1.40.3/MODULE.bazel": "668e6bcb4d957fc0e284316dba546b705c8d43c857f87119619ee83c4555b859",
-    "https://bcr.bazel.build/modules/aspect_bazel_lib/1.40.3/source.json": "f5a28b1320e5f444e798b4afc1465c8b720bfaec7522cca38a23583dffe85e6d",
+    "https://bcr.bazel.build/modules/aspect_bazel_lib/2.7.2/MODULE.bazel": "780d1a6522b28f5edb7ea09630748720721dfe27690d65a2d33aa7509de77e07",
+    "https://bcr.bazel.build/modules/aspect_bazel_lib/2.7.2/source.json": "a9ee2898e86eb8106e67b2adcd63de788cd922dd82f90f6775f13b0bf2248d75",
     "https://bcr.bazel.build/modules/aspect_rules_js/1.33.1/MODULE.bazel": "db3e7f16e471cf6827059d03af7c21859e7a0d2bc65429a3a11f005d46fc501b",
     "https://bcr.bazel.build/modules/aspect_rules_js/1.39.0/MODULE.bazel": "aece421d479e3c31dc3e5f6d49a12acc2700457c03c556650ec7a0ff23fc0d95",
     "https://bcr.bazel.build/modules/aspect_rules_js/1.39.0/source.json": "a8f93e4ad8843e8aa407fa5fd7c8b63a63846c0ce255371ff23384582813b13d",
     "https://bcr.bazel.build/modules/aspect_rules_lint/0.12.0/MODULE.bazel": "e767c5dbfeb254ec03275a7701b5cfde2c4d2873676804bc7cb27ddff3728fed",
     "https://bcr.bazel.build/modules/aspect_rules_lint/0.12.0/source.json": "9a3668e1ee219170e22c0e7f3ab959724c6198fdd12cd503fa10b1c6923a2559",
     "https://bcr.bazel.build/modules/bazel_features/0.1.0/MODULE.bazel": "47011d645b0f949f42ee67f2e8775188a9cf4a0a1528aa2fa4952f2fd00906fd",
+    "https://bcr.bazel.build/modules/bazel_features/1.1.1/MODULE.bazel": "27b8c79ef57efe08efccbd9dd6ef70d61b4798320b8d3c134fd571f78963dbcd",
+    "https://bcr.bazel.build/modules/bazel_features/1.10.0/MODULE.bazel": "f75e8807570484a99be90abcd52b5e1f390362c258bcb73106f4544957a48101",
     "https://bcr.bazel.build/modules/bazel_features/1.11.0/MODULE.bazel": "f9382337dd5a474c3b7d334c2f83e50b6eaedc284253334cf823044a26de03e8",
     "https://bcr.bazel.build/modules/bazel_features/1.11.0/source.json": "c9320aa53cd1c441d24bd6b716da087ad7e4ff0d9742a9884587596edfe53015",
     "https://bcr.bazel.build/modules/bazel_features/1.4.1/MODULE.bazel": "e45b6bb2350aff3e442ae1111c555e27eac1d915e77775f6fdc4b351b758b5d7",
@@ -52,6 +55,8 @@
     "https://bcr.bazel.build/modules/protobuf/3.19.0/MODULE.bazel": "6b5fbb433f760a99a22b18b6850ed5784ef0e9928a72668b66e4d7ccd47db9b0",
     "https://bcr.bazel.build/modules/protobuf/3.19.2/MODULE.bazel": "532ffe5f2186b69fdde039efe6df13ba726ff338c6bc82275ad433013fa10573",
     "https://bcr.bazel.build/modules/protobuf/3.19.6/MODULE.bazel": "9233edc5e1f2ee276a60de3eaa47ac4132302ef9643238f23128fea53ea12858",
+    "https://bcr.bazel.build/modules/rules_apko/1.4.0/MODULE.bazel": "ce1a76703d237cbaaa3069a4b9f02e01a383f12338718167ecd365af4a3e711b",
+    "https://bcr.bazel.build/modules/rules_apko/1.4.0/source.json": "0c06333e1d985c2da7cc918cce9cbfd44fc77b002d63ec6138534d94600995e9",
     "https://bcr.bazel.build/modules/rules_buf/0.1.1/MODULE.bazel": "6189aec18a4f7caff599ad41b851ab7645d4f1e114aa6431acf9b0666eb92162",
     "https://bcr.bazel.build/modules/rules_buf/0.1.1/source.json": "021363d254f7438f3f10725355969c974bb2c67e0c28667782ade31a9cdb747f",
     "https://bcr.bazel.build/modules/rules_cc/0.0.1/MODULE.bazel": "cb2aa0747f84c6c3a78dad4e2049c154f08ab9d166b1273835a8174940365647",
@@ -75,18 +80,22 @@
     "https://bcr.bazel.build/modules/rules_license/0.0.8/source.json": "ccfd3964cd0cd1739202efb8dbf9a06baab490e61e174b2ad4790f9c4e610beb",
     "https://bcr.bazel.build/modules/rules_nodejs/5.8.2/MODULE.bazel": "6bc03c8f37f69401b888023bf511cb6ee4781433b0cb56236b2e55a21e3a026a",
     "https://bcr.bazel.build/modules/rules_nodejs/5.8.2/source.json": "6e82cf5753d835ea18308200bc79b9c2e782efe2e2a4edc004a9162ca93382ca",
+    "https://bcr.bazel.build/modules/rules_oci/2.0.1/MODULE.bazel": "b1984eceba83906786f99e7e8273754458e1c5f3d39e3b0b28f03d12be9d4099",
+    "https://bcr.bazel.build/modules/rules_oci/2.0.1/source.json": "70f86dc00a62cde2103e8c50b8fd1f120252f2cb735ecce8aba3842ff1b5875f",
     "https://bcr.bazel.build/modules/rules_pkg/0.7.0/MODULE.bazel": "df99f03fc7934a4737122518bb87e667e62d780b610910f0447665a7e2be62dc",
-    "https://bcr.bazel.build/modules/rules_pkg/0.7.0/source.json": "c2557066e0c0342223ba592510ad3d812d4963b9024831f7f66fd0584dd8c66c",
+    "https://bcr.bazel.build/modules/rules_pkg/1.0.1/MODULE.bazel": "5b1df97dbc29623bccdf2b0dcd0f5cb08e2f2c9050aab1092fd39a41e82686ff",
+    "https://bcr.bazel.build/modules/rules_pkg/1.0.1/source.json": "bd82e5d7b9ce2d31e380dd9f50c111d678c3bdaca190cb76b0e1c71b05e1ba8a",
     "https://bcr.bazel.build/modules/rules_proto/4.0.0/MODULE.bazel": "a7a7b6ce9bee418c1a760b3d84f83a299ad6952f9903c67f19e4edd964894e06",
     "https://bcr.bazel.build/modules/rules_proto/5.3.0-21.7/MODULE.bazel": "e8dff86b0971688790ae75528fe1813f71809b5afd57facb44dad9e8eca631b7",
     "https://bcr.bazel.build/modules/rules_proto/6.0.2/MODULE.bazel": "ce916b775a62b90b61888052a416ccdda405212b6aaeb39522f7dc53431a5e73",
     "https://bcr.bazel.build/modules/rules_proto/6.0.2/source.json": "17a2e195f56cb28d6bbf763e49973d13890487c6945311ed141e196fb660426d",
     "https://bcr.bazel.build/modules/rules_python/0.10.2/MODULE.bazel": "cc82bc96f2997baa545ab3ce73f196d040ffb8756fd2d66125a530031cd90e5f",
     "https://bcr.bazel.build/modules/rules_python/0.22.1/MODULE.bazel": "26114f0c0b5e93018c0c066d6673f1a2c3737c7e90af95eff30cfee38d0bbac7",
-    "https://bcr.bazel.build/modules/rules_python/0.22.1/source.json": "57226905e783bae7c37c2dd662be078728e48fa28ee4324a7eabcafb5a43d014",
+    "https://bcr.bazel.build/modules/rules_python/0.31.0/MODULE.bazel": "93a43dc47ee570e6ec9f5779b2e64c1476a6ce921c48cc9a1678a91dd5f8fd58",
+    "https://bcr.bazel.build/modules/rules_python/0.31.0/source.json": "a41c836d4065888eef4377f2f27b6eea0fedb9b5adb1bab1970437373fe90dc7",
     "https://bcr.bazel.build/modules/rules_python/0.4.0/MODULE.bazel": "9208ee05fd48bf09ac60ed269791cf17fb343db56c8226a720fbb1cdf467166c",
-    "https://bcr.bazel.build/modules/rules_rust/0.51.0/MODULE.bazel": "2b6d1617ac8503bfdcc0e4520c20539d4bba3a691100bee01afe193ceb0310f9",
-    "https://bcr.bazel.build/modules/rules_rust/0.51.0/source.json": "79a530199d9826a93b31d05b7d9b39dc753a80f88856d3ca5376f665a82cc5e6",
+    "https://bcr.bazel.build/modules/rules_rust/0.52.2/MODULE.bazel": "dd5891166055bbbd598eb31393041910d72e3ef7e8ba8c77a4156eeadb8e84cc",
+    "https://bcr.bazel.build/modules/rules_rust/0.52.2/source.json": "37e50dd517c33331585fe53913e6884b8f556fc7dca7fde6142b02cf38b17098",
     "https://bcr.bazel.build/modules/stardoc/0.5.0/MODULE.bazel": "f9f1f46ba8d9c3362648eea571c6f9100680efc44913618811b58cc9c02cd678",
     "https://bcr.bazel.build/modules/stardoc/0.5.1/MODULE.bazel": "1a05d92974d0c122f5ccf09291442580317cdd859f07a8655f1db9a60374f9f8",
     "https://bcr.bazel.build/modules/stardoc/0.5.4/MODULE.bazel": "6569966df04610b8520957cb8e97cf2e9faac2c0309657c537ab51c16c18a2a4",
@@ -132,8 +141,8 @@
     },
     "@@aspect_bazel_lib~//lib:extensions.bzl%toolchains": {
       "general": {
-        "bzlTransitiveDigest": "qiD0fpTLVZo9P5Y6qUqwBsf7KvVtw81bCb6Xiek5c+M=",
-        "usagesDigest": "uqgzTdDJUzAb/qbRyvCSMbjlZi8ytEReANssTjiDVmo=",
+        "bzlTransitiveDigest": "nzNCCKeGDuuaB6uzXddNTVOHkFu9zZDzQ37VqiZh/Sg=",
+        "usagesDigest": "DtBxwa1elBvQZIwHOWfGY5Gsbr8f3i3F2f/J+znjctk=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -152,24 +161,12 @@
               "platform": "windows_amd64"
             }
           },
-          "jq": {
-            "bzlFile": "@@aspect_bazel_lib~//lib/private:jq_toolchain.bzl",
-            "ruleClassName": "jq_host_alias_repo",
-            "attributes": {}
-          },
           "jq_darwin_amd64": {
             "bzlFile": "@@aspect_bazel_lib~//lib/private:jq_toolchain.bzl",
             "ruleClassName": "jq_platform_repo",
             "attributes": {
               "platform": "darwin_amd64",
-              "version": "1.6"
-            }
-          },
-          "expand_template_darwin_arm64": {
-            "bzlFile": "@@aspect_bazel_lib~//lib/private:expand_template_toolchain.bzl",
-            "ruleClassName": "expand_template_platform_repo",
-            "attributes": {
-              "platform": "darwin_arm64"
+              "version": "1.7"
             }
           },
           "copy_to_directory_freebsd_amd64": {
@@ -186,11 +183,12 @@
               "platform": "linux_amd64"
             }
           },
-          "copy_to_directory_linux_amd64": {
-            "bzlFile": "@@aspect_bazel_lib~//lib/private:copy_to_directory_toolchain.bzl",
-            "ruleClassName": "copy_to_directory_platform_repo",
+          "jq_linux_arm64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:jq_toolchain.bzl",
+            "ruleClassName": "jq_platform_repo",
             "attributes": {
-              "platform": "linux_amd64"
+              "platform": "linux_arm64",
+              "version": "1.7"
             }
           },
           "coreutils_darwin_arm64": {
@@ -198,22 +196,7 @@
             "ruleClassName": "coreutils_platform_repo",
             "attributes": {
               "platform": "darwin_arm64",
-              "version": "0.0.16"
-            }
-          },
-          "coreutils_linux_amd64": {
-            "bzlFile": "@@aspect_bazel_lib~//lib/private:coreutils_toolchain.bzl",
-            "ruleClassName": "coreutils_platform_repo",
-            "attributes": {
-              "platform": "linux_amd64",
-              "version": "0.0.16"
-            }
-          },
-          "copy_directory_toolchains": {
-            "bzlFile": "@@aspect_bazel_lib~//lib/private:copy_directory_toolchain.bzl",
-            "ruleClassName": "copy_directory_toolchains_repo",
-            "attributes": {
-              "user_repository_name": "copy_directory"
+              "version": "0.0.23"
             }
           },
           "copy_to_directory_linux_arm64": {
@@ -223,19 +206,11 @@
               "platform": "linux_arm64"
             }
           },
-          "yq_linux_amd64": {
-            "bzlFile": "@@aspect_bazel_lib~//lib/private:yq_toolchain.bzl",
-            "ruleClassName": "yq_platform_repo",
+          "bsd_tar_linux_arm64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:tar_toolchain.bzl",
+            "ruleClassName": "bsdtar_binary_repo",
             "attributes": {
-              "platform": "linux_amd64",
-              "version": "4.25.2"
-            }
-          },
-          "copy_to_directory_darwin_arm64": {
-            "bzlFile": "@@aspect_bazel_lib~//lib/private:copy_to_directory_toolchain.bzl",
-            "ruleClassName": "copy_to_directory_platform_repo",
-            "attributes": {
-              "platform": "darwin_arm64"
+              "platform": "linux_arm64"
             }
           },
           "copy_directory_darwin_amd64": {
@@ -250,7 +225,7 @@
             "ruleClassName": "coreutils_platform_repo",
             "attributes": {
               "platform": "darwin_amd64",
-              "version": "0.0.16"
+              "version": "0.0.23"
             }
           },
           "coreutils_linux_arm64": {
@@ -258,21 +233,14 @@
             "ruleClassName": "coreutils_platform_repo",
             "attributes": {
               "platform": "linux_arm64",
-              "version": "0.0.16"
+              "version": "0.0.23"
             }
           },
-          "coreutils_toolchains": {
-            "bzlFile": "@@aspect_bazel_lib~//lib/private:coreutils_toolchain.bzl",
-            "ruleClassName": "coreutils_toolchains_repo",
+          "zstd_linux_arm64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:zstd_toolchain.bzl",
+            "ruleClassName": "zstd_binary_repo",
             "attributes": {
-              "user_repository_name": "coreutils"
-            }
-          },
-          "copy_directory_freebsd_amd64": {
-            "bzlFile": "@@aspect_bazel_lib~//lib/private:copy_directory_toolchain.bzl",
-            "ruleClassName": "copy_directory_platform_repo",
-            "attributes": {
-              "platform": "freebsd_amd64"
+              "platform": "linux_arm64"
             }
           },
           "yq_linux_s390x": {
@@ -307,7 +275,7 @@
             "ruleClassName": "jq_platform_repo",
             "attributes": {
               "platform": "darwin_arm64",
-              "version": "1.6"
+              "version": "1.7"
             }
           },
           "yq_darwin_amd64": {
@@ -325,6 +293,175 @@
               "platform": "linux_arm64"
             }
           },
+          "expand_template_toolchains": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:expand_template_toolchain.bzl",
+            "ruleClassName": "expand_template_toolchains_repo",
+            "attributes": {
+              "user_repository_name": "expand_template"
+            }
+          },
+          "bats_assert": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "sha256": "98ca3b685f8b8993e48ec057565e6e2abcc541034ed5b0e81f191505682037fd",
+              "urls": [
+                "https://github.com/bats-core/bats-assert/archive/v2.1.0.tar.gz"
+              ],
+              "strip_prefix": "bats-assert-2.1.0",
+              "build_file_content": "load(\"@aspect_bazel_lib//lib:copy_to_directory.bzl\", \"copy_to_directory\")\n\ncopy_to_directory(\n    name = \"assert\",\n    hardlink = \"on\",\n    srcs = glob([\n        \"src/**\",\n        \"load.bash\",\n    ]),\n    out = \"bats-assert\",\n    visibility = [\"//visibility:public\"]\n)\n"
+            }
+          },
+          "copy_to_directory_darwin_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:copy_to_directory_toolchain.bzl",
+            "ruleClassName": "copy_to_directory_platform_repo",
+            "attributes": {
+              "platform": "darwin_amd64"
+            }
+          },
+          "zstd_darwin_arm64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:zstd_toolchain.bzl",
+            "ruleClassName": "zstd_binary_repo",
+            "attributes": {
+              "platform": "darwin_arm64"
+            }
+          },
+          "bsd_tar_linux_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:tar_toolchain.bzl",
+            "ruleClassName": "bsdtar_binary_repo",
+            "attributes": {
+              "platform": "linux_amd64"
+            }
+          },
+          "yq_toolchains": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:yq_toolchain.bzl",
+            "ruleClassName": "yq_toolchains_repo",
+            "attributes": {
+              "user_repository_name": "yq"
+            }
+          },
+          "zstd_linux_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:zstd_toolchain.bzl",
+            "ruleClassName": "zstd_binary_repo",
+            "attributes": {
+              "platform": "linux_amd64"
+            }
+          },
+          "bats_support": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "sha256": "7815237aafeb42ddcc1b8c698fc5808026d33317d8701d5ec2396e9634e2918f",
+              "urls": [
+                "https://github.com/bats-core/bats-support/archive/v0.3.0.tar.gz"
+              ],
+              "strip_prefix": "bats-support-0.3.0",
+              "build_file_content": "load(\"@aspect_bazel_lib//lib:copy_to_directory.bzl\", \"copy_to_directory\")\n\ncopy_to_directory(\n    name = \"support\",\n    hardlink = \"on\",\n    srcs = glob([\n        \"src/**\",\n        \"load.bash\",\n    ]),\n    out = \"bats-support\",\n    visibility = [\"//visibility:public\"]\n)\n"
+            }
+          },
+          "bsd_tar_windows_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:tar_toolchain.bzl",
+            "ruleClassName": "bsdtar_binary_repo",
+            "attributes": {
+              "platform": "windows_amd64"
+            }
+          },
+          "jq": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:jq_toolchain.bzl",
+            "ruleClassName": "jq_host_alias_repo",
+            "attributes": {}
+          },
+          "expand_template_darwin_arm64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:expand_template_toolchain.bzl",
+            "ruleClassName": "expand_template_platform_repo",
+            "attributes": {
+              "platform": "darwin_arm64"
+            }
+          },
+          "bsd_tar_darwin_arm64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:tar_toolchain.bzl",
+            "ruleClassName": "bsdtar_binary_repo",
+            "attributes": {
+              "platform": "darwin_arm64"
+            }
+          },
+          "copy_to_directory_linux_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:copy_to_directory_toolchain.bzl",
+            "ruleClassName": "copy_to_directory_platform_repo",
+            "attributes": {
+              "platform": "linux_amd64"
+            }
+          },
+          "coreutils_linux_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:coreutils_toolchain.bzl",
+            "ruleClassName": "coreutils_platform_repo",
+            "attributes": {
+              "platform": "linux_amd64",
+              "version": "0.0.23"
+            }
+          },
+          "copy_directory_toolchains": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:copy_directory_toolchain.bzl",
+            "ruleClassName": "copy_directory_toolchains_repo",
+            "attributes": {
+              "user_repository_name": "copy_directory"
+            }
+          },
+          "yq_linux_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:yq_toolchain.bzl",
+            "ruleClassName": "yq_platform_repo",
+            "attributes": {
+              "platform": "linux_amd64",
+              "version": "4.25.2"
+            }
+          },
+          "copy_to_directory_darwin_arm64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:copy_to_directory_toolchain.bzl",
+            "ruleClassName": "copy_to_directory_platform_repo",
+            "attributes": {
+              "platform": "darwin_arm64"
+            }
+          },
+          "coreutils_toolchains": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:coreutils_toolchain.bzl",
+            "ruleClassName": "coreutils_toolchains_repo",
+            "attributes": {
+              "user_repository_name": "coreutils"
+            }
+          },
+          "copy_directory_freebsd_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:copy_directory_toolchain.bzl",
+            "ruleClassName": "copy_directory_platform_repo",
+            "attributes": {
+              "platform": "freebsd_amd64"
+            }
+          },
+          "zstd_darwin_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:zstd_toolchain.bzl",
+            "ruleClassName": "zstd_binary_repo",
+            "attributes": {
+              "platform": "darwin_amd64"
+            }
+          },
+          "zstd_toolchains": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:zstd_toolchain.bzl",
+            "ruleClassName": "zstd_toolchains_repo",
+            "attributes": {
+              "user_repository_name": "zstd"
+            }
+          },
+          "bats_file": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "sha256": "9b69043241f3af1c2d251f89b4fcafa5df3f05e97b89db18d7c9bdf5731bb27a",
+              "urls": [
+                "https://github.com/bats-core/bats-file/archive/v0.4.0.tar.gz"
+              ],
+              "strip_prefix": "bats-file-0.4.0",
+              "build_file_content": "load(\"@aspect_bazel_lib//lib:copy_to_directory.bzl\", \"copy_to_directory\")\n\ncopy_to_directory(\n    name = \"file\",\n    hardlink = \"on\",\n    srcs = glob([\n        \"src/**\",\n        \"load.bash\",\n    ]),\n    out = \"bats-file\",\n    visibility = [\"//visibility:public\"]\n)\n"
+            }
+          },
           "expand_template_linux_arm64": {
             "bzlFile": "@@aspect_bazel_lib~//lib/private:expand_template_toolchain.bzl",
             "ruleClassName": "expand_template_platform_repo",
@@ -337,14 +474,33 @@
             "ruleClassName": "jq_platform_repo",
             "attributes": {
               "platform": "linux_amd64",
-              "version": "1.6"
+              "version": "1.7"
             }
           },
-          "expand_template_toolchains": {
-            "bzlFile": "@@aspect_bazel_lib~//lib/private:expand_template_toolchain.bzl",
-            "ruleClassName": "expand_template_toolchains_repo",
+          "bsd_tar_darwin_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:tar_toolchain.bzl",
+            "ruleClassName": "bsdtar_binary_repo",
             "attributes": {
-              "user_repository_name": "expand_template"
+              "platform": "darwin_amd64"
+            }
+          },
+          "bsd_tar_toolchains": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:tar_toolchain.bzl",
+            "ruleClassName": "tar_toolchains_repo",
+            "attributes": {
+              "user_repository_name": "bsd_tar"
+            }
+          },
+          "bats_toolchains": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "sha256": "a1a9f7875aa4b6a9480ca384d5865f1ccf1b0b1faead6b47aa47d79709a5c5fd",
+              "urls": [
+                "https://github.com/bats-core/bats-core/archive/v1.10.0.tar.gz"
+              ],
+              "strip_prefix": "bats-core-1.10.0",
+              "build_file_content": "load(\"@local_config_platform//:constraints.bzl\", \"HOST_CONSTRAINTS\")\nload(\"@aspect_bazel_lib//lib/private:bats_toolchain.bzl\", \"bats_toolchain\")\nload(\"@aspect_bazel_lib//lib:copy_to_directory.bzl\", \"copy_to_directory\")\n\ncopy_to_directory(\n    name = \"core\",\n    hardlink = \"on\",\n    srcs = glob([\n        \"lib/**\",\n        \"libexec/**\"\n    ]) + [\"bin/bats\"],\n    out = \"bats-core\",\n)\n\nbats_toolchain(\n    name = \"toolchain\",\n    core = \":core\",\n    libraries = [\"@bats_support//:support\", \"@bats_assert//:assert\", \"@bats_file//:file\"]\n)\n\ntoolchain(\n    name = \"bats_toolchain\",\n    exec_compatible_with = HOST_CONSTRAINTS,\n    toolchain = \":toolchain\",\n    toolchain_type = \"@aspect_bazel_lib//lib:bats_toolchain_type\",\n)\n"
             }
           },
           "yq_windows_amd64": {
@@ -355,19 +511,12 @@
               "version": "4.25.2"
             }
           },
-          "copy_to_directory_darwin_amd64": {
-            "bzlFile": "@@aspect_bazel_lib~//lib/private:copy_to_directory_toolchain.bzl",
-            "ruleClassName": "copy_to_directory_platform_repo",
-            "attributes": {
-              "platform": "darwin_amd64"
-            }
-          },
           "jq_windows_amd64": {
             "bzlFile": "@@aspect_bazel_lib~//lib/private:jq_toolchain.bzl",
             "ruleClassName": "jq_platform_repo",
             "attributes": {
               "platform": "windows_amd64",
-              "version": "1.6"
+              "version": "1.7"
             }
           },
           "expand_template_freebsd_amd64": {
@@ -421,19 +570,12 @@
               "version": "4.25.2"
             }
           },
-          "yq_toolchains": {
-            "bzlFile": "@@aspect_bazel_lib~//lib/private:yq_toolchain.bzl",
-            "ruleClassName": "yq_toolchains_repo",
-            "attributes": {
-              "user_repository_name": "yq"
-            }
-          },
           "coreutils_windows_amd64": {
             "bzlFile": "@@aspect_bazel_lib~//lib/private:coreutils_toolchain.bzl",
             "ruleClassName": "coreutils_platform_repo",
             "attributes": {
               "platform": "windows_amd64",
-              "version": "0.0.16"
+              "version": "0.0.23"
             }
           },
           "yq_linux_arm64": {
@@ -479,6 +621,579 @@
           }
         },
         "recordedRepoMappingEntries": []
+      }
+    },
+    "@@rules_apko~//apko:extensions.bzl%apko": {
+      "general": {
+        "bzlTransitiveDigest": "FxYovtygS36jNw9oKzfchirzUhgOIDsGgSz18eLTWsc=",
+        "usagesDigest": "5NB5WOWP/mKO7xw3NlG0R1Bl4mMEajGOlcgcBiWNxhE=",
+        "recordedFileInputs": {
+          "@@//images/base_image/apko.lock.json": "04ab2d7c2a44216a68d79c24a8fce047e5ced57f64ba5564f271353607f9c359"
+        },
+        "recordedDirentsInputs": {},
+        "envVariables": {},
+        "generatedRepoSpecs": {
+          "apko_darwin_arm64": {
+            "bzlFile": "@@rules_apko~//apko:repositories.bzl",
+            "ruleClassName": "apko_repositories",
+            "attributes": {
+              "platform": "darwin_arm64",
+              "sha256": "sha256-5hLBKfVaqBMrGzTiHsF/Er4p5AZwB++xKDRgFjD/Pho=",
+              "url": "https://github.com/chainguard-dev/apko/releases/download/v0.19.2/apko_0.19.2_darwin_arm64.tar.gz",
+              "apko_version": "0.19.2",
+              "strip_prefix": "apko_0.19.2_darwin_arm64"
+            }
+          },
+          "base_image_packages.wolfi.dev_os_aarch64_aarch64": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_repository",
+            "attributes": {
+              "url": "https://packages.wolfi.dev/os/aarch64/APKINDEX.tar.gz",
+              "architecture": "aarch64"
+            }
+          },
+          "base_image_busybox_x86_64_1.37.0-r0": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "busybox",
+              "version": "1.37.0-r0",
+              "architecture": "x86_64",
+              "url": "https://packages.wolfi.dev/os/x86_64/busybox-1.37.0-r0.apk",
+              "signature_range": "",
+              "signature_checksum": "",
+              "control_range": "bytes=0-494",
+              "control_checksum": "sha1-QvnHw1EiaN8Dl/XTzKoL1eZCYjE=",
+              "data_range": "bytes=495-420879",
+              "data_checksum": "sha256-0xAfVTKP/vl5Si1PqBmt/ffonATq8itZSHGZxBwgG6M="
+            }
+          },
+          "base_image_wolfi-base_aarch64_1-r6": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "wolfi-base",
+              "version": "1-r6",
+              "architecture": "aarch64",
+              "url": "https://packages.wolfi.dev/os/aarch64/wolfi-base-1-r6.apk",
+              "signature_range": "bytes=0-695",
+              "signature_checksum": "sha1-E81k7Bi4vBC27K/95hyXso9mbQE=",
+              "control_range": "bytes=696-1056",
+              "control_checksum": "sha1-uR9YHhW84LuBjpxtLoDWO1fIo1k=",
+              "data_range": "bytes=1057-1978",
+              "data_checksum": "sha256-Jgv6F0BBma9uDppDvvqRL0T4UsXQZtiVnMq8CwtpWMQ="
+            }
+          },
+          "base_image_wolfi-baselayout_x86_64_20230201-r15": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "wolfi-baselayout",
+              "version": "20230201-r15",
+              "architecture": "x86_64",
+              "url": "https://packages.wolfi.dev/os/x86_64/wolfi-baselayout-20230201-r15.apk",
+              "signature_range": "bytes=0-705",
+              "signature_checksum": "sha1-+hsODEbmCcG6wK+X96cIxwO0Bbc=",
+              "control_range": "bytes=706-1053",
+              "control_checksum": "sha1-zmkTyK0dOGvhVXVa63sB0Rv/atY=",
+              "data_range": "bytes=1054-12163",
+              "data_checksum": "sha256-xXPt586efA0TcVdlBeBb/ZMRhMaTVySkyYTie5J6E94="
+            }
+          },
+          "base_image_glibc_x86_64_2.40-r2": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "glibc",
+              "version": "2.40-r2",
+              "architecture": "x86_64",
+              "url": "https://packages.wolfi.dev/os/x86_64/glibc-2.40-r2.apk",
+              "signature_range": "bytes=0-699",
+              "signature_checksum": "sha1-8qWo9na+zDGRdsCkspqrRmh/rp0=",
+              "control_range": "bytes=700-1308",
+              "control_checksum": "sha1-svwEotg0cosWmMSmj/Df0tgRzxo=",
+              "data_range": "bytes=1309-2822200",
+              "data_checksum": "sha256-l98ENO3Z/YnVV8gpj4aEmbUIBQl0tH0S103FlOwbyE0="
+            }
+          },
+          "base_image_libssl3_aarch64_3.3.2-r0": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "libssl3",
+              "version": "3.3.2-r0",
+              "architecture": "aarch64",
+              "url": "https://packages.wolfi.dev/os/aarch64/libssl3-3.3.2-r0.apk",
+              "signature_range": "bytes=0-697",
+              "signature_checksum": "sha1-CXUou1POKKkTY/in7aWzq77ZuxM=",
+              "control_range": "bytes=698-1080",
+              "control_checksum": "sha1-bW1IvyE7GZB5+0tUzNjwQCgiV18=",
+              "data_range": "bytes=1081-501860",
+              "data_checksum": "sha256-Ex+lWNjk8Rphu/xEzFcgQPPXqD9IgamEcX91Xeq/0CA="
+            }
+          },
+          "apko_linux_amd64": {
+            "bzlFile": "@@rules_apko~//apko:repositories.bzl",
+            "ruleClassName": "apko_repositories",
+            "attributes": {
+              "platform": "linux_amd64",
+              "sha256": "sha256-IdXHZC4/CBRCRouCyWYt2ETy8AhIT/JAGLTStEl1t9M=",
+              "url": "https://github.com/chainguard-dev/apko/releases/download/v0.19.2/apko_0.19.2_linux_amd64.tar.gz",
+              "apko_version": "0.19.2",
+              "strip_prefix": "apko_0.19.2_linux_amd64"
+            }
+          },
+          "base_image_apk-tools_aarch64_2.14.4-r0": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "apk-tools",
+              "version": "2.14.4-r0",
+              "architecture": "aarch64",
+              "url": "https://packages.wolfi.dev/os/aarch64/apk-tools-2.14.4-r0.apk",
+              "signature_range": "bytes=0-705",
+              "signature_checksum": "sha1-xWFMViILpCq540FqJgcKMubwvgw=",
+              "control_range": "bytes=706-1135",
+              "control_checksum": "sha1-fuLaiCRAC8ZEv0uNlOdUL/49Z9A=",
+              "data_range": "bytes=1136-183938",
+              "data_checksum": "sha256-tO7czZHVKPNo5SgB+zIQ5nt+GKW7Q6+FBOWzkJ+5l2M="
+            }
+          },
+          "base_image_wolfi-keys_aarch64_1-r8": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "wolfi-keys",
+              "version": "1-r8",
+              "architecture": "aarch64",
+              "url": "https://packages.wolfi.dev/os/aarch64/wolfi-keys-1-r8.apk",
+              "signature_range": "bytes=0-694",
+              "signature_checksum": "sha1-Dw2hdMuVD4tLGGiFVQV/+yCDDFs=",
+              "control_range": "bytes=695-1028",
+              "control_checksum": "sha1-HnzYmuMLrQWaA5Ie+DCRV38GOzY=",
+              "data_range": "bytes=1029-2983",
+              "data_checksum": "sha256-aw2O8Q5wDTwd9uikJQmfLxYBraCssy6jAhjx242Wi94="
+            }
+          },
+          "apko_linux_arm64": {
+            "bzlFile": "@@rules_apko~//apko:repositories.bzl",
+            "ruleClassName": "apko_repositories",
+            "attributes": {
+              "platform": "linux_arm64",
+              "sha256": "sha256-2v2EySFUNJtovpkASfvxEXwteq4rwD3ItJ5LZWP0Tjc=",
+              "url": "https://github.com/chainguard-dev/apko/releases/download/v0.19.2/apko_0.19.2_linux_arm64.tar.gz",
+              "apko_version": "0.19.2",
+              "strip_prefix": "apko_0.19.2_linux_arm64"
+            }
+          },
+          "base_image_libcrypt1_x86_64_2.40-r2": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "libcrypt1",
+              "version": "2.40-r2",
+              "architecture": "x86_64",
+              "url": "https://packages.wolfi.dev/os/x86_64/libcrypt1-2.40-r2.apk",
+              "signature_range": "bytes=0-705",
+              "signature_checksum": "sha1-oQnqDUDD5/AV/J1ErnojADpsAao=",
+              "control_range": "bytes=706-1098",
+              "control_checksum": "sha1-FhQh9fRIa6oEmeHK7DcBanfViEU=",
+              "data_range": "bytes=1099-2147",
+              "data_checksum": "sha256-R8hnnJmRGOkhn8PbWNTi8sYQXRKrr/fApyzFsp0+j3Y="
+            }
+          },
+          "base_image_zlib_x86_64_1.3.1-r4": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "zlib",
+              "version": "1.3.1-r4",
+              "architecture": "x86_64",
+              "url": "https://packages.wolfi.dev/os/x86_64/zlib-1.3.1-r4.apk",
+              "signature_range": "bytes=0-693",
+              "signature_checksum": "sha1-veZ+Gmg2Se5AoXIkNaVbG9xVPNI=",
+              "control_range": "bytes=694-1077",
+              "control_checksum": "sha1-BERCewGJVIkPpMoG7t13ter7+Go=",
+              "data_range": "bytes=1078-61438",
+              "data_checksum": "sha256-+JOPvMTzIWTLR+5cccK4AXWXO2kvBp1mH9/AGlFSD5c="
+            }
+          },
+          "base_image_ca-certificates-bundle_aarch64_20240705-r1": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "ca-certificates-bundle",
+              "version": "20240705-r1",
+              "architecture": "aarch64",
+              "url": "https://packages.wolfi.dev/os/aarch64/ca-certificates-bundle-20240705-r1.apk",
+              "signature_range": "",
+              "signature_checksum": "",
+              "control_range": "bytes=0-329",
+              "control_checksum": "sha1-Od476o92rEcn8TJQbQKsVQEfup8=",
+              "data_range": "bytes=330-129925",
+              "data_checksum": "sha256-zTW+cP5LA+5UnVxhSjcZRGdNcktk6gHKDZmxEzykpP0="
+            }
+          },
+          "base_image_wolfi-keys_x86_64_1-r8": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "wolfi-keys",
+              "version": "1-r8",
+              "architecture": "x86_64",
+              "url": "https://packages.wolfi.dev/os/x86_64/wolfi-keys-1-r8.apk",
+              "signature_range": "bytes=0-695",
+              "signature_checksum": "sha1-yuEfqJ7YiQNLkDOojPkXamh6bcs=",
+              "control_range": "bytes=696-1034",
+              "control_checksum": "sha1-YLOq6c+iCrZS7vrBuNCCQqVXu/0=",
+              "data_range": "bytes=1035-2989",
+              "data_checksum": "sha256-BU5bWPVBD6l68QnI5pOnx7zTm1jpj+jPMoO4nOSiv2Q="
+            }
+          },
+          "base_image_zlib_aarch64_1.3.1-r4": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "zlib",
+              "version": "1.3.1-r4",
+              "architecture": "aarch64",
+              "url": "https://packages.wolfi.dev/os/aarch64/zlib-1.3.1-r4.apk",
+              "signature_range": "bytes=0-700",
+              "signature_checksum": "sha1-7lOxbU3c4AEUT5kG6cy8aFhJxVE=",
+              "control_range": "bytes=701-1098",
+              "control_checksum": "sha1-PIFHBnTWjxCrgpIq/qepeOH3zBU=",
+              "data_range": "bytes=1099-51455",
+              "data_checksum": "sha256-6ipnvWDbexn8TGPbyqrEgHygLnnQSvAosJu2jFJT8uY="
+            }
+          },
+          "base_image_libcrypt1_aarch64_2.40-r2": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "libcrypt1",
+              "version": "2.40-r2",
+              "architecture": "aarch64",
+              "url": "https://packages.wolfi.dev/os/aarch64/libcrypt1-2.40-r2.apk",
+              "signature_range": "bytes=0-702",
+              "signature_checksum": "sha1-kcsLP67j1HMXy/z7CBN/j5M3rL8=",
+              "control_range": "bytes=703-1092",
+              "control_checksum": "sha1-Vt+c97kjgKSolC+KwusQwRDfujc=",
+              "data_range": "bytes=1093-2141",
+              "data_checksum": "sha256-QV0sqYDdpzE5jWlvm8aIhp5yClreMUBwLiQxI7Dohz4="
+            }
+          },
+          "base_image_apk-tools_x86_64_2.14.4-r0": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "apk-tools",
+              "version": "2.14.4-r0",
+              "architecture": "x86_64",
+              "url": "https://packages.wolfi.dev/os/x86_64/apk-tools-2.14.4-r0.apk",
+              "signature_range": "bytes=0-699",
+              "signature_checksum": "sha1-Nl2iLupTvBTyTCbDrH5VNbBvqsY=",
+              "control_range": "bytes=700-1135",
+              "control_checksum": "sha1-d6KWlsyysrLbDnqZNOxD3yXQArs=",
+              "data_range": "bytes=1136-182567",
+              "data_checksum": "sha256-PxwHUjByuYsDLfP2+E4x8ywCE2Lkk9mzYgRm2w4ayNk="
+            }
+          },
+          "base_image_glibc-locale-posix_aarch64_2.40-r2": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "glibc-locale-posix",
+              "version": "2.40-r2",
+              "architecture": "aarch64",
+              "url": "https://packages.wolfi.dev/os/aarch64/glibc-locale-posix-2.40-r2.apk",
+              "signature_range": "bytes=0-700",
+              "signature_checksum": "sha1-K8SU4VD1en8nU0htAAR+VRzJQc4=",
+              "control_range": "bytes=701-1043",
+              "control_checksum": "sha1-KdYqBqqBFyzrDLBOXY8VfcUKUL8=",
+              "data_range": "bytes=1044-75721",
+              "data_checksum": "sha256-DYhPNuZs5MwUEhjVs+jIhawpt29MOvLOlkjxbcSqfrc="
+            }
+          },
+          "base_image_ld-linux_x86_64_2.40-r2": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "ld-linux",
+              "version": "2.40-r2",
+              "architecture": "x86_64",
+              "url": "https://packages.wolfi.dev/os/x86_64/ld-linux-2.40-r2.apk",
+              "signature_range": "bytes=0-692",
+              "signature_checksum": "sha1-GABLsLv8FgBgfhg1I5NauE0raDs=",
+              "control_range": "bytes=693-1089",
+              "control_checksum": "sha1-qMcGwmanPGYt0N34jBQPHfyPTNQ=",
+              "data_range": "bytes=1090-127604",
+              "data_checksum": "sha256-e64nrftAWw3tA32vSLdRzoE51S4ZBHHzhCPjaLUfZiM="
+            }
+          },
+          "base_image_wolfi-baselayout_aarch64_20230201-r15": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "wolfi-baselayout",
+              "version": "20230201-r15",
+              "architecture": "aarch64",
+              "url": "https://packages.wolfi.dev/os/aarch64/wolfi-baselayout-20230201-r15.apk",
+              "signature_range": "bytes=0-700",
+              "signature_checksum": "sha1-WpBU366luzjLQ6VS3brT42ti0lk=",
+              "control_range": "bytes=701-1046",
+              "control_checksum": "sha1-xRkIGUU69f7/jQY052mWfgWpYrA=",
+              "data_range": "bytes=1047-12154",
+              "data_checksum": "sha256-XbprEl9LYlD0CtA/fPP/gAsavxZ8jm+DT6+dItHFOw8="
+            }
+          },
+          "base_image_ca-certificates-bundle_x86_64_20240705-r1": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "ca-certificates-bundle",
+              "version": "20240705-r1",
+              "architecture": "x86_64",
+              "url": "https://packages.wolfi.dev/os/x86_64/ca-certificates-bundle-20240705-r1.apk",
+              "signature_range": "",
+              "signature_checksum": "",
+              "control_range": "bytes=0-332",
+              "control_checksum": "sha1-IRCEAB2IAnEmJucqRMp7WXC83DY=",
+              "data_range": "bytes=333-129926",
+              "data_checksum": "sha256-FRixxMyyTqyBh0juBSWmNhLsQBg4Ez6oh86tMdtBRAY="
+            }
+          },
+          "base_image_libcrypto3_x86_64_3.3.2-r0": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "libcrypto3",
+              "version": "3.3.2-r0",
+              "architecture": "x86_64",
+              "url": "https://packages.wolfi.dev/os/x86_64/libcrypto3-3.3.2-r0.apk",
+              "signature_range": "bytes=0-701",
+              "signature_checksum": "sha1-8BNbShLbqZtPQ4qlqV4AUUUTPmE=",
+              "control_range": "bytes=702-1065",
+              "control_checksum": "sha1-PMBsIOKNPxp97HYM1j6l38H+dUI=",
+              "data_range": "bytes=1066-2305029",
+              "data_checksum": "sha256-YHLY6ISR63RD/hpfXcEQmM8OpkBCkqZAIxhzFgZLoWo="
+            }
+          },
+          "base_image_libssl3_x86_64_3.3.2-r0": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "libssl3",
+              "version": "3.3.2-r0",
+              "architecture": "x86_64",
+              "url": "https://packages.wolfi.dev/os/x86_64/libssl3-3.3.2-r0.apk",
+              "signature_range": "bytes=0-696",
+              "signature_checksum": "sha1-USub8fNNgogWW+t5DHTWnrvAwt4=",
+              "control_range": "bytes=697-1066",
+              "control_checksum": "sha1-GTeRSLBxTc14VkyumqRbJAQ4Ou8=",
+              "data_range": "bytes=1067-509818",
+              "data_checksum": "sha256-BOxmhcGlG3RaGIku6tOdC1i0/LNzUsIcvIxUAI1hybM="
+            }
+          },
+          "base_image_ld-linux_aarch64_2.40-r2": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "ld-linux",
+              "version": "2.40-r2",
+              "architecture": "aarch64",
+              "url": "https://packages.wolfi.dev/os/aarch64/ld-linux-2.40-r2.apk",
+              "signature_range": "bytes=0-703",
+              "signature_checksum": "sha1-3BQKSMTQYaQvJwTo0LCHOWyUJPc=",
+              "control_range": "bytes=704-1098",
+              "control_checksum": "sha1-ybIZiETo71rXu0K54Hqb1YfDY4E=",
+              "data_range": "bytes=1099-107421",
+              "data_checksum": "sha256-G8Mm+BTHS4hoNf8VPMgjlnZZUZldBvc7xpUVxVBeOcs="
+            }
+          },
+          "base_image_libcrypto3_aarch64_3.3.2-r0": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "libcrypto3",
+              "version": "3.3.2-r0",
+              "architecture": "aarch64",
+              "url": "https://packages.wolfi.dev/os/aarch64/libcrypto3-3.3.2-r0.apk",
+              "signature_range": "bytes=0-700",
+              "signature_checksum": "sha1-3+MWNLl3aJOFRkIyfgqDYWavnD4=",
+              "control_range": "bytes=701-1078",
+              "control_checksum": "sha1-YH3gSxK/PTDShjd4hRVDEkZqZvY=",
+              "data_range": "bytes=1079-2157321",
+              "data_checksum": "sha256-56ET5dWFFL2f1sbF26gD3Z2r0ujbRyhywGWj/6R5zOA="
+            }
+          },
+          "base_image_packages.wolfi.dev_os_wolfi-signing.rsa.pub": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_keyring",
+            "attributes": {
+              "url": "https://packages.wolfi.dev/os/wolfi-signing.rsa.pub"
+            }
+          },
+          "base_image_libxcrypt_aarch64_4.4.36-r7": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "libxcrypt",
+              "version": "4.4.36-r7",
+              "architecture": "aarch64",
+              "url": "https://packages.wolfi.dev/os/aarch64/libxcrypt-4.4.36-r7.apk",
+              "signature_range": "bytes=0-706",
+              "signature_checksum": "sha1-veJQf32YQqPlXD087wDruNR+4rQ=",
+              "control_range": "bytes=707-1099",
+              "control_checksum": "sha1-WnkcoQvww/RbnbJKzN/j1mTmKxc=",
+              "data_range": "bytes=1100-91602",
+              "data_checksum": "sha256-TUzmZwe+uRVhiVHMNEVWGZiuZZboc6NZG4uBrMquBNw="
+            }
+          },
+          "apko_darwin_amd64": {
+            "bzlFile": "@@rules_apko~//apko:repositories.bzl",
+            "ruleClassName": "apko_repositories",
+            "attributes": {
+              "platform": "darwin_amd64",
+              "sha256": "sha256-2CNAV7DkXZYp0GzedQNXcIPxeJVQRy30xbOBvDdlhsg=",
+              "url": "https://github.com/chainguard-dev/apko/releases/download/v0.19.2/apko_0.19.2_darwin_amd64.tar.gz",
+              "apko_version": "0.19.2",
+              "strip_prefix": "apko_0.19.2_darwin_amd64"
+            }
+          },
+          "apko_linux_386": {
+            "bzlFile": "@@rules_apko~//apko:repositories.bzl",
+            "ruleClassName": "apko_repositories",
+            "attributes": {
+              "platform": "linux_386",
+              "sha256": "sha256-D1EmpWMT+DwRrWkVdI+6vxw54o7aiPfUfDSWPaXllBs=",
+              "url": "https://github.com/chainguard-dev/apko/releases/download/v0.19.2/apko_0.19.2_linux_386.tar.gz",
+              "apko_version": "0.19.2",
+              "strip_prefix": "apko_0.19.2_linux_386"
+            }
+          },
+          "base_image_wolfi-base_x86_64_1-r6": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "wolfi-base",
+              "version": "1-r6",
+              "architecture": "x86_64",
+              "url": "https://packages.wolfi.dev/os/x86_64/wolfi-base-1-r6.apk",
+              "signature_range": "bytes=0-704",
+              "signature_checksum": "sha1-jK+Qoiq0RvAGVURkgEz4O+GW7n4=",
+              "control_range": "bytes=705-1068",
+              "control_checksum": "sha1-lrNusYOBmqA3J4Yfe63FzIt6Ezs=",
+              "data_range": "bytes=1069-1993",
+              "data_checksum": "sha256-cS8VKmEnrdhVCd7QuHhNqpkGSTsq/BJWlxYr9AJ1KP0="
+            }
+          },
+          "base_image_glibc_aarch64_2.40-r2": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "glibc",
+              "version": "2.40-r2",
+              "architecture": "aarch64",
+              "url": "https://packages.wolfi.dev/os/aarch64/glibc-2.40-r2.apk",
+              "signature_range": "bytes=0-699",
+              "signature_checksum": "sha1-ngAA/QXpjmseu6LczP+3f0839Sk=",
+              "control_range": "bytes=700-1304",
+              "control_checksum": "sha1-UBBH+olJI92cbCVFS7wGx63NeCk=",
+              "data_range": "bytes=1305-2058862",
+              "data_checksum": "sha256-XRXa79po2UML40QEmno36WWp2AI+OQc5ypnTXBWC2XE="
+            }
+          },
+          "base_image_packages.wolfi.dev_os_x86_64_x86_64": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_repository",
+            "attributes": {
+              "url": "https://packages.wolfi.dev/os/x86_64/APKINDEX.tar.gz",
+              "architecture": "x86_64"
+            }
+          },
+          "base_image_busybox_aarch64_1.37.0-r0": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "busybox",
+              "version": "1.37.0-r0",
+              "architecture": "aarch64",
+              "url": "https://packages.wolfi.dev/os/aarch64/busybox-1.37.0-r0.apk",
+              "signature_range": "",
+              "signature_checksum": "",
+              "control_range": "bytes=0-489",
+              "control_checksum": "sha1-3+6MfiuOBmevCCZvDgl6/DGVCy4=",
+              "data_range": "bytes=490-430557",
+              "data_checksum": "sha256-tr45HOO9wpjZQwwRdfqkBpZyNETHGYE+1kEwgaEmmZw="
+            }
+          },
+          "base_image_glibc-locale-posix_x86_64_2.40-r2": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "glibc-locale-posix",
+              "version": "2.40-r2",
+              "architecture": "x86_64",
+              "url": "https://packages.wolfi.dev/os/x86_64/glibc-locale-posix-2.40-r2.apk",
+              "signature_range": "bytes=0-705",
+              "signature_checksum": "sha1-KSV7M+qCTDez4jabtUn9bi0mhPc=",
+              "control_range": "bytes=706-1051",
+              "control_checksum": "sha1-3EHESqHJii62e3OussPLCd1P6uM=",
+              "data_range": "bytes=1052-75729",
+              "data_checksum": "sha256-j/Y1x9xJ1gg5aKerSLHWKwrpOEGARyqNOQRU+9w6ulA="
+            }
+          },
+          "base_image": {
+            "bzlFile": "@@rules_apko~//apko:translate_lock.bzl",
+            "ruleClassName": "translate_apko_lock",
+            "attributes": {
+              "target_name": "base_image",
+              "lock": "@@//images/base_image:apko.lock.json"
+            }
+          },
+          "apko_toolchains": {
+            "bzlFile": "@@rules_apko~//apko/private:toolchains_repo.bzl",
+            "ruleClassName": "toolchains_repo",
+            "attributes": {
+              "user_repository_name": "apko",
+              "platforms": [
+                "darwin_amd64",
+                "darwin_arm64",
+                "linux_386",
+                "linux_amd64",
+                "linux_arm64"
+              ]
+            }
+          },
+          "base_image_libxcrypt_x86_64_4.4.36-r7": {
+            "bzlFile": "@@rules_apko~//apko/private:apk.bzl",
+            "ruleClassName": "apk_import",
+            "attributes": {
+              "package_name": "libxcrypt",
+              "version": "4.4.36-r7",
+              "architecture": "x86_64",
+              "url": "https://packages.wolfi.dev/os/x86_64/libxcrypt-4.4.36-r7.apk",
+              "signature_range": "bytes=0-696",
+              "signature_checksum": "sha1-TzqIvPLJxnJXjp9f6Zz6TDjc3vI=",
+              "control_range": "bytes=697-1092",
+              "control_checksum": "sha1-IbvTzcXUyY3M4HSurKCl4pqkI2o=",
+              "data_range": "bytes=1093-84765",
+              "data_checksum": "sha256-/rIlvPr9j1TCCfCup07Nn1XGUs3HVoAbLFHd12zyzII="
+            }
+          }
+        },
+        "recordedRepoMappingEntries": [
+          [
+            "rules_apko~",
+            "bazel_skylib",
+            "bazel_skylib~"
+          ],
+          [
+            "rules_apko~",
+            "bazel_tools",
+            "bazel_tools"
+          ]
+        ]
       }
     },
     "@@rules_buf~//buf:extensions.bzl%ext": {
@@ -661,10 +1376,822 @@
         ]
       }
     },
+    "@@rules_oci~//oci:extensions.bzl%oci": {
+      "general": {
+        "bzlTransitiveDigest": "eO4GDDnlb6iPqeluktcs5CyaU1PX9a8WCDZAkBr8WXE=",
+        "usagesDigest": "NZeKyz4OYqLZQrkq7m6OLZzM3Q9p3CQH/iqLXLB1u24=",
+        "recordedFileInputs": {},
+        "recordedDirentsInputs": {},
+        "envVariables": {},
+        "generatedRepoSpecs": {
+          "bazel_features_version": {
+            "bzlFile": "@@bazel_features~//private:version_repo.bzl",
+            "ruleClassName": "version_repo",
+            "attributes": {}
+          },
+          "copy_to_directory_windows_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:copy_to_directory_toolchain.bzl",
+            "ruleClassName": "copy_to_directory_platform_repo",
+            "attributes": {
+              "platform": "windows_amd64"
+            }
+          },
+          "jq_darwin_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:jq_toolchain.bzl",
+            "ruleClassName": "jq_platform_repo",
+            "attributes": {
+              "platform": "darwin_amd64",
+              "version": "1.7"
+            }
+          },
+          "copy_to_directory_freebsd_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:copy_to_directory_toolchain.bzl",
+            "ruleClassName": "copy_to_directory_platform_repo",
+            "attributes": {
+              "platform": "freebsd_amd64"
+            }
+          },
+          "oci_crane_linux_arm64": {
+            "bzlFile": "@@rules_oci~//oci:repositories.bzl",
+            "ruleClassName": "crane_repositories",
+            "attributes": {
+              "platform": "linux_arm64",
+              "crane_version": "v0.18.0"
+            }
+          },
+          "jq_linux_arm64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:jq_toolchain.bzl",
+            "ruleClassName": "jq_platform_repo",
+            "attributes": {
+              "platform": "linux_arm64",
+              "version": "1.7"
+            }
+          },
+          "coreutils_darwin_arm64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:coreutils_toolchain.bzl",
+            "ruleClassName": "coreutils_platform_repo",
+            "attributes": {
+              "platform": "darwin_arm64",
+              "version": "0.0.23"
+            }
+          },
+          "bsd_tar_linux_arm64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:tar_toolchain.bzl",
+            "ruleClassName": "bsdtar_binary_repo",
+            "attributes": {
+              "platform": "linux_arm64"
+            }
+          },
+          "copy_to_directory_linux_arm64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:copy_to_directory_toolchain.bzl",
+            "ruleClassName": "copy_to_directory_platform_repo",
+            "attributes": {
+              "platform": "linux_arm64"
+            }
+          },
+          "oci_regctl_toolchains": {
+            "bzlFile": "@@rules_oci~//oci/private:toolchains_repo.bzl",
+            "ruleClassName": "toolchains_repo",
+            "attributes": {
+              "toolchain_type": "@rules_oci//oci:regctl_toolchain_type",
+              "toolchain": "@oci_regctl_{platform}//:regctl_toolchain"
+            }
+          },
+          "oci_crane_linux_amd64": {
+            "bzlFile": "@@rules_oci~//oci:repositories.bzl",
+            "ruleClassName": "crane_repositories",
+            "attributes": {
+              "platform": "linux_amd64",
+              "crane_version": "v0.18.0"
+            }
+          },
+          "coreutils_darwin_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:coreutils_toolchain.bzl",
+            "ruleClassName": "coreutils_platform_repo",
+            "attributes": {
+              "platform": "darwin_amd64",
+              "version": "0.0.23"
+            }
+          },
+          "coreutils_linux_arm64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:coreutils_toolchain.bzl",
+            "ruleClassName": "coreutils_platform_repo",
+            "attributes": {
+              "platform": "linux_arm64",
+              "version": "0.0.23"
+            }
+          },
+          "zstd_linux_arm64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:zstd_toolchain.bzl",
+            "ruleClassName": "zstd_binary_repo",
+            "attributes": {
+              "platform": "linux_arm64"
+            }
+          },
+          "oci_crane_darwin_arm64": {
+            "bzlFile": "@@rules_oci~//oci:repositories.bzl",
+            "ruleClassName": "crane_repositories",
+            "attributes": {
+              "platform": "darwin_arm64",
+              "crane_version": "v0.18.0"
+            }
+          },
+          "jq_darwin_arm64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:jq_toolchain.bzl",
+            "ruleClassName": "jq_platform_repo",
+            "attributes": {
+              "platform": "darwin_arm64",
+              "version": "1.7"
+            }
+          },
+          "oci_regctl_linux_s390x": {
+            "bzlFile": "@@rules_oci~//oci:repositories.bzl",
+            "ruleClassName": "regctl_repositories",
+            "attributes": {
+              "platform": "linux_s390x"
+            }
+          },
+          "oci_regctl_darwin_amd64": {
+            "bzlFile": "@@rules_oci~//oci:repositories.bzl",
+            "ruleClassName": "regctl_repositories",
+            "attributes": {
+              "platform": "darwin_amd64"
+            }
+          },
+          "oci_crane_linux_i386": {
+            "bzlFile": "@@rules_oci~//oci:repositories.bzl",
+            "ruleClassName": "crane_repositories",
+            "attributes": {
+              "platform": "linux_i386",
+              "crane_version": "v0.18.0"
+            }
+          },
+          "oci_regctl_windows_amd64": {
+            "bzlFile": "@@rules_oci~//oci:repositories.bzl",
+            "ruleClassName": "regctl_repositories",
+            "attributes": {
+              "platform": "windows_amd64"
+            }
+          },
+          "oci_crane_windows_armv6": {
+            "bzlFile": "@@rules_oci~//oci:repositories.bzl",
+            "ruleClassName": "crane_repositories",
+            "attributes": {
+              "platform": "windows_armv6",
+              "crane_version": "v0.18.0"
+            }
+          },
+          "oci_crane_toolchains": {
+            "bzlFile": "@@rules_oci~//oci/private:toolchains_repo.bzl",
+            "ruleClassName": "toolchains_repo",
+            "attributes": {
+              "toolchain_type": "@rules_oci//oci:crane_toolchain_type",
+              "toolchain": "@oci_crane_{platform}//:crane_toolchain"
+            }
+          },
+          "copy_to_directory_darwin_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:copy_to_directory_toolchain.bzl",
+            "ruleClassName": "copy_to_directory_platform_repo",
+            "attributes": {
+              "platform": "darwin_amd64"
+            }
+          },
+          "zstd_darwin_arm64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:zstd_toolchain.bzl",
+            "ruleClassName": "zstd_binary_repo",
+            "attributes": {
+              "platform": "darwin_arm64"
+            }
+          },
+          "bsd_tar_linux_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:tar_toolchain.bzl",
+            "ruleClassName": "bsdtar_binary_repo",
+            "attributes": {
+              "platform": "linux_amd64"
+            }
+          },
+          "oci_crane_windows_amd64": {
+            "bzlFile": "@@rules_oci~//oci:repositories.bzl",
+            "ruleClassName": "crane_repositories",
+            "attributes": {
+              "platform": "windows_amd64",
+              "crane_version": "v0.18.0"
+            }
+          },
+          "oci_crane_linux_s390x": {
+            "bzlFile": "@@rules_oci~//oci:repositories.bzl",
+            "ruleClassName": "crane_repositories",
+            "attributes": {
+              "platform": "linux_s390x",
+              "crane_version": "v0.18.0"
+            }
+          },
+          "oci_regctl_linux_arm64": {
+            "bzlFile": "@@rules_oci~//oci:repositories.bzl",
+            "ruleClassName": "regctl_repositories",
+            "attributes": {
+              "platform": "linux_arm64"
+            }
+          },
+          "zstd_linux_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:zstd_toolchain.bzl",
+            "ruleClassName": "zstd_binary_repo",
+            "attributes": {
+              "platform": "linux_amd64"
+            }
+          },
+          "oci_regctl_darwin_arm64": {
+            "bzlFile": "@@rules_oci~//oci:repositories.bzl",
+            "ruleClassName": "regctl_repositories",
+            "attributes": {
+              "platform": "darwin_arm64"
+            }
+          },
+          "bsd_tar_windows_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:tar_toolchain.bzl",
+            "ruleClassName": "bsdtar_binary_repo",
+            "attributes": {
+              "platform": "windows_amd64"
+            }
+          },
+          "jq": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:jq_toolchain.bzl",
+            "ruleClassName": "jq_host_alias_repo",
+            "attributes": {}
+          },
+          "oci_crane_darwin_amd64": {
+            "bzlFile": "@@rules_oci~//oci:repositories.bzl",
+            "ruleClassName": "crane_repositories",
+            "attributes": {
+              "platform": "darwin_amd64",
+              "crane_version": "v0.18.0"
+            }
+          },
+          "bsd_tar_darwin_arm64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:tar_toolchain.bzl",
+            "ruleClassName": "bsdtar_binary_repo",
+            "attributes": {
+              "platform": "darwin_arm64"
+            }
+          },
+          "copy_to_directory_linux_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:copy_to_directory_toolchain.bzl",
+            "ruleClassName": "copy_to_directory_platform_repo",
+            "attributes": {
+              "platform": "linux_amd64"
+            }
+          },
+          "coreutils_linux_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:coreutils_toolchain.bzl",
+            "ruleClassName": "coreutils_platform_repo",
+            "attributes": {
+              "platform": "linux_amd64",
+              "version": "0.0.23"
+            }
+          },
+          "bazel_skylib": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "sha256": "9f38886a40548c6e96c106b752f242130ee11aaa068a56ba7e56f4511f33e4f2",
+              "urls": [
+                "https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/releases/download/1.6.1/bazel-skylib-1.6.1.tar.gz",
+                "https://github.com/bazelbuild/bazel-skylib/releases/download/1.6.1/bazel-skylib-1.6.1.tar.gz"
+              ]
+            }
+          },
+          "oci_crane_linux_armv6": {
+            "bzlFile": "@@rules_oci~//oci:repositories.bzl",
+            "ruleClassName": "crane_repositories",
+            "attributes": {
+              "platform": "linux_armv6",
+              "crane_version": "v0.18.0"
+            }
+          },
+          "copy_to_directory_darwin_arm64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:copy_to_directory_toolchain.bzl",
+            "ruleClassName": "copy_to_directory_platform_repo",
+            "attributes": {
+              "platform": "darwin_arm64"
+            }
+          },
+          "coreutils_toolchains": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:coreutils_toolchain.bzl",
+            "ruleClassName": "coreutils_toolchains_repo",
+            "attributes": {
+              "user_repository_name": "coreutils"
+            }
+          },
+          "zstd_darwin_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:zstd_toolchain.bzl",
+            "ruleClassName": "zstd_binary_repo",
+            "attributes": {
+              "platform": "darwin_amd64"
+            }
+          },
+          "zstd_toolchains": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:zstd_toolchain.bzl",
+            "ruleClassName": "zstd_toolchains_repo",
+            "attributes": {
+              "user_repository_name": "zstd"
+            }
+          },
+          "jq_linux_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:jq_toolchain.bzl",
+            "ruleClassName": "jq_platform_repo",
+            "attributes": {
+              "platform": "linux_amd64",
+              "version": "1.7"
+            }
+          },
+          "bsd_tar_darwin_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:tar_toolchain.bzl",
+            "ruleClassName": "bsdtar_binary_repo",
+            "attributes": {
+              "platform": "darwin_amd64"
+            }
+          },
+          "oci_regctl_linux_amd64": {
+            "bzlFile": "@@rules_oci~//oci:repositories.bzl",
+            "ruleClassName": "regctl_repositories",
+            "attributes": {
+              "platform": "linux_amd64"
+            }
+          },
+          "bsd_tar_toolchains": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:tar_toolchain.bzl",
+            "ruleClassName": "tar_toolchains_repo",
+            "attributes": {
+              "user_repository_name": "bsd_tar"
+            }
+          },
+          "jq_windows_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:jq_toolchain.bzl",
+            "ruleClassName": "jq_platform_repo",
+            "attributes": {
+              "platform": "windows_amd64",
+              "version": "1.7"
+            }
+          },
+          "jq_toolchains": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:jq_toolchain.bzl",
+            "ruleClassName": "jq_toolchains_repo",
+            "attributes": {
+              "user_repository_name": "jq"
+            }
+          },
+          "copy_to_directory_toolchains": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:copy_to_directory_toolchain.bzl",
+            "ruleClassName": "copy_to_directory_toolchains_repo",
+            "attributes": {
+              "user_repository_name": "copy_to_directory"
+            }
+          },
+          "bazel_features_globals": {
+            "bzlFile": "@@bazel_features~//private:globals_repo.bzl",
+            "ruleClassName": "globals_repo",
+            "attributes": {
+              "globals": {
+                "RunEnvironmentInfo": "5.3.0",
+                "DefaultInfo": "0.0.1",
+                "__TestingOnly_NeverAvailable": "1000000000.0.0"
+              }
+            }
+          },
+          "coreutils_windows_amd64": {
+            "bzlFile": "@@aspect_bazel_lib~//lib/private:coreutils_toolchain.bzl",
+            "ruleClassName": "coreutils_platform_repo",
+            "attributes": {
+              "platform": "windows_amd64",
+              "version": "0.0.23"
+            }
+          }
+        },
+        "moduleExtensionMetadata": {
+          "explicitRootModuleDirectDeps": [],
+          "explicitRootModuleDirectDevDeps": [],
+          "useAllRepos": "NO",
+          "reproducible": false
+        },
+        "recordedRepoMappingEntries": [
+          [
+            "aspect_bazel_lib~",
+            "bazel_tools",
+            "bazel_tools"
+          ],
+          [
+            "bazel_features~",
+            "bazel_tools",
+            "bazel_tools"
+          ],
+          [
+            "rules_oci~",
+            "aspect_bazel_lib",
+            "aspect_bazel_lib~"
+          ],
+          [
+            "rules_oci~",
+            "bazel_features",
+            "bazel_features~"
+          ],
+          [
+            "rules_oci~",
+            "bazel_skylib",
+            "bazel_skylib~"
+          ]
+        ]
+      }
+    },
+    "@@rules_python~//python/extensions:python.bzl%python": {
+      "general": {
+        "bzlTransitiveDigest": "uHZmn4VCpelMhuk7Rz8Q5oK94ttURW5KkyvXa6hRTfk=",
+        "usagesDigest": "fQEsnAYwqRJT7/lTBAe+NllONXk6f/Tc57oiPxLG8SI=",
+        "recordedFileInputs": {},
+        "recordedDirentsInputs": {},
+        "envVariables": {
+          "RULES_PYTHON_BZLMOD_DEBUG": null
+        },
+        "generatedRepoSpecs": {
+          "python_3_11_s390x-unknown-linux-gnu": {
+            "bzlFile": "@@rules_python~//python:repositories.bzl",
+            "ruleClassName": "python_repository",
+            "attributes": {
+              "sha256": "49520e3ff494708020f306e30b0964f079170be83e956be4504f850557378a22",
+              "patches": [],
+              "platform": "s390x-unknown-linux-gnu",
+              "python_version": "3.11.7",
+              "release_filename": "20240107/cpython-3.11.7+20240107-s390x-unknown-linux-gnu-install_only.tar.gz",
+              "urls": [
+                "https://github.com/indygreg/python-build-standalone/releases/download/20240107/cpython-3.11.7+20240107-s390x-unknown-linux-gnu-install_only.tar.gz"
+              ],
+              "distutils_content": "",
+              "strip_prefix": "python",
+              "coverage_tool": "",
+              "ignore_root_user_error": false
+            }
+          },
+          "python_3_11_host": {
+            "bzlFile": "@@rules_python~//python/private:toolchains_repo.bzl",
+            "ruleClassName": "host_toolchain",
+            "attributes": {
+              "python_version": "3.11.7",
+              "user_repository_name": "python_3_11",
+              "platforms": [
+                "aarch64-apple-darwin",
+                "aarch64-unknown-linux-gnu",
+                "ppc64le-unknown-linux-gnu",
+                "s390x-unknown-linux-gnu",
+                "x86_64-apple-darwin",
+                "x86_64-pc-windows-msvc",
+                "x86_64-unknown-linux-gnu"
+              ]
+            }
+          },
+          "python_3_11": {
+            "bzlFile": "@@rules_python~//python/private:toolchains_repo.bzl",
+            "ruleClassName": "toolchain_aliases",
+            "attributes": {
+              "python_version": "3.11.7",
+              "user_repository_name": "python_3_11",
+              "platforms": [
+                "aarch64-apple-darwin",
+                "aarch64-unknown-linux-gnu",
+                "ppc64le-unknown-linux-gnu",
+                "s390x-unknown-linux-gnu",
+                "x86_64-apple-darwin",
+                "x86_64-pc-windows-msvc",
+                "x86_64-unknown-linux-gnu"
+              ]
+            }
+          },
+          "python_3_11_aarch64-unknown-linux-gnu": {
+            "bzlFile": "@@rules_python~//python:repositories.bzl",
+            "ruleClassName": "python_repository",
+            "attributes": {
+              "sha256": "b102eaf865eb715aa98a8a2ef19037b6cc3ae7dfd4a632802650f29de635aa13",
+              "patches": [],
+              "platform": "aarch64-unknown-linux-gnu",
+              "python_version": "3.11.7",
+              "release_filename": "20240107/cpython-3.11.7+20240107-aarch64-unknown-linux-gnu-install_only.tar.gz",
+              "urls": [
+                "https://github.com/indygreg/python-build-standalone/releases/download/20240107/cpython-3.11.7+20240107-aarch64-unknown-linux-gnu-install_only.tar.gz"
+              ],
+              "distutils_content": "",
+              "strip_prefix": "python",
+              "coverage_tool": "",
+              "ignore_root_user_error": false
+            }
+          },
+          "python_3_11_aarch64-apple-darwin": {
+            "bzlFile": "@@rules_python~//python:repositories.bzl",
+            "ruleClassName": "python_repository",
+            "attributes": {
+              "sha256": "b042c966920cf8465385ca3522986b12d745151a72c060991088977ca36d3883",
+              "patches": [],
+              "platform": "aarch64-apple-darwin",
+              "python_version": "3.11.7",
+              "release_filename": "20240107/cpython-3.11.7+20240107-aarch64-apple-darwin-install_only.tar.gz",
+              "urls": [
+                "https://github.com/indygreg/python-build-standalone/releases/download/20240107/cpython-3.11.7+20240107-aarch64-apple-darwin-install_only.tar.gz"
+              ],
+              "distutils_content": "",
+              "strip_prefix": "python",
+              "coverage_tool": "",
+              "ignore_root_user_error": false
+            }
+          },
+          "python_3_11_ppc64le-unknown-linux-gnu": {
+            "bzlFile": "@@rules_python~//python:repositories.bzl",
+            "ruleClassName": "python_repository",
+            "attributes": {
+              "sha256": "b44e1b74afe75c7b19143413632c4386708ae229117f8f950c2094e9681d34c7",
+              "patches": [],
+              "platform": "ppc64le-unknown-linux-gnu",
+              "python_version": "3.11.7",
+              "release_filename": "20240107/cpython-3.11.7+20240107-ppc64le-unknown-linux-gnu-install_only.tar.gz",
+              "urls": [
+                "https://github.com/indygreg/python-build-standalone/releases/download/20240107/cpython-3.11.7+20240107-ppc64le-unknown-linux-gnu-install_only.tar.gz"
+              ],
+              "distutils_content": "",
+              "strip_prefix": "python",
+              "coverage_tool": "",
+              "ignore_root_user_error": false
+            }
+          },
+          "python_3_11_x86_64-apple-darwin": {
+            "bzlFile": "@@rules_python~//python:repositories.bzl",
+            "ruleClassName": "python_repository",
+            "attributes": {
+              "sha256": "a0e615eef1fafdc742da0008425a9030b7ea68a4ae4e73ac557ef27b112836d4",
+              "patches": [],
+              "platform": "x86_64-apple-darwin",
+              "python_version": "3.11.7",
+              "release_filename": "20240107/cpython-3.11.7+20240107-x86_64-apple-darwin-install_only.tar.gz",
+              "urls": [
+                "https://github.com/indygreg/python-build-standalone/releases/download/20240107/cpython-3.11.7+20240107-x86_64-apple-darwin-install_only.tar.gz"
+              ],
+              "distutils_content": "",
+              "strip_prefix": "python",
+              "coverage_tool": "",
+              "ignore_root_user_error": false
+            }
+          },
+          "pythons_hub": {
+            "bzlFile": "@@rules_python~//python/private/bzlmod:pythons_hub.bzl",
+            "ruleClassName": "hub_repo",
+            "attributes": {
+              "default_python_version": "3.11",
+              "toolchain_prefixes": [
+                "_0000_python_3_11_"
+              ],
+              "toolchain_python_versions": [
+                "3.11"
+              ],
+              "toolchain_set_python_version_constraints": [
+                "False"
+              ],
+              "toolchain_user_repository_names": [
+                "python_3_11"
+              ]
+            }
+          },
+          "python_versions": {
+            "bzlFile": "@@rules_python~//python/private:toolchains_repo.bzl",
+            "ruleClassName": "multi_toolchain_aliases",
+            "attributes": {
+              "python_versions": {
+                "3.11": "python_3_11"
+              }
+            }
+          },
+          "python_3_11_x86_64-pc-windows-msvc": {
+            "bzlFile": "@@rules_python~//python:repositories.bzl",
+            "ruleClassName": "python_repository",
+            "attributes": {
+              "sha256": "67077e6fa918e4f4fd60ba169820b00be7c390c497bf9bc9cab2c255ea8e6f3e",
+              "patches": [],
+              "platform": "x86_64-pc-windows-msvc",
+              "python_version": "3.11.7",
+              "release_filename": "20240107/cpython-3.11.7+20240107-x86_64-pc-windows-msvc-shared-install_only.tar.gz",
+              "urls": [
+                "https://github.com/indygreg/python-build-standalone/releases/download/20240107/cpython-3.11.7+20240107-x86_64-pc-windows-msvc-shared-install_only.tar.gz"
+              ],
+              "distutils_content": "",
+              "strip_prefix": "python",
+              "coverage_tool": "",
+              "ignore_root_user_error": false
+            }
+          },
+          "python_3_11_x86_64-unknown-linux-gnu": {
+            "bzlFile": "@@rules_python~//python:repositories.bzl",
+            "ruleClassName": "python_repository",
+            "attributes": {
+              "sha256": "4a51ce60007a6facf64e5495f4cf322e311ba9f39a8cd3f3e4c026eae488e140",
+              "patches": [],
+              "platform": "x86_64-unknown-linux-gnu",
+              "python_version": "3.11.7",
+              "release_filename": "20240107/cpython-3.11.7+20240107-x86_64-unknown-linux-gnu-install_only.tar.gz",
+              "urls": [
+                "https://github.com/indygreg/python-build-standalone/releases/download/20240107/cpython-3.11.7+20240107-x86_64-unknown-linux-gnu-install_only.tar.gz"
+              ],
+              "distutils_content": "",
+              "strip_prefix": "python",
+              "coverage_tool": "",
+              "ignore_root_user_error": false
+            }
+          }
+        },
+        "recordedRepoMappingEntries": [
+          [
+            "rules_python~",
+            "bazel_skylib",
+            "bazel_skylib~"
+          ],
+          [
+            "rules_python~",
+            "bazel_tools",
+            "bazel_tools"
+          ]
+        ]
+      }
+    },
+    "@@rules_python~//python/private/bzlmod:internal_deps.bzl%internal_deps": {
+      "general": {
+        "bzlTransitiveDigest": "k05IAnu/N6e9CnPr7q0UXa7U54cIegSInQS0KZiOV9Y=",
+        "usagesDigest": "4Fj9JSpEDoJSLPRSbvSTol2bTL7baZjuA3k9U7kG/1k=",
+        "recordedFileInputs": {},
+        "recordedDirentsInputs": {},
+        "envVariables": {},
+        "generatedRepoSpecs": {
+          "pypi__wheel": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://files.pythonhosted.org/packages/b8/8b/31273bf66016be6ad22bb7345c37ff350276cfd46e389a0c2ac5da9d9073/wheel-0.41.2-py3-none-any.whl",
+              "sha256": "75909db2664838d015e3d9139004ee16711748a52c8f336b52882266540215d8",
+              "type": "zip",
+              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/*.pyc.*\",  # During pyc creation, temp files named *.pyc.NNN are created\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
+            }
+          },
+          "pypi__click": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://files.pythonhosted.org/packages/00/2e/d53fa4befbf2cfa713304affc7ca780ce4fc1fd8710527771b58311a3229/click-8.1.7-py3-none-any.whl",
+              "sha256": "ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28",
+              "type": "zip",
+              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/*.pyc.*\",  # During pyc creation, temp files named *.pyc.NNN are created\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
+            }
+          },
+          "pypi__importlib_metadata": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://files.pythonhosted.org/packages/cc/37/db7ba97e676af155f5fcb1a35466f446eadc9104e25b83366e8088c9c926/importlib_metadata-6.8.0-py3-none-any.whl",
+              "sha256": "3ebb78df84a805d7698245025b975d9d67053cd94c79245ba4b3eb694abe68bb",
+              "type": "zip",
+              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/*.pyc.*\",  # During pyc creation, temp files named *.pyc.NNN are created\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
+            }
+          },
+          "pypi__pyproject_hooks": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://files.pythonhosted.org/packages/d5/ea/9ae603de7fbb3df820b23a70f6aff92bf8c7770043254ad8d2dc9d6bcba4/pyproject_hooks-1.0.0-py3-none-any.whl",
+              "sha256": "283c11acd6b928d2f6a7c73fa0d01cb2bdc5f07c57a2eeb6e83d5e56b97976f8",
+              "type": "zip",
+              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/*.pyc.*\",  # During pyc creation, temp files named *.pyc.NNN are created\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
+            }
+          },
+          "pypi__pep517": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://files.pythonhosted.org/packages/ee/2f/ef63e64e9429111e73d3d6cbee80591672d16f2725e648ebc52096f3d323/pep517-0.13.0-py3-none-any.whl",
+              "sha256": "4ba4446d80aed5b5eac6509ade100bff3e7943a8489de249654a5ae9b33ee35b",
+              "type": "zip",
+              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/*.pyc.*\",  # During pyc creation, temp files named *.pyc.NNN are created\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
+            }
+          },
+          "pypi__packaging": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://files.pythonhosted.org/packages/ab/c3/57f0601a2d4fe15de7a553c00adbc901425661bf048f2a22dfc500caf121/packaging-23.1-py3-none-any.whl",
+              "sha256": "994793af429502c4ea2ebf6bf664629d07c1a9fe974af92966e4b8d2df7edc61",
+              "type": "zip",
+              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/*.pyc.*\",  # During pyc creation, temp files named *.pyc.NNN are created\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
+            }
+          },
+          "pypi__pip_tools": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://files.pythonhosted.org/packages/e8/df/47e6267c6b5cdae867adbdd84b437393e6202ce4322de0a5e0b92960e1d6/pip_tools-7.3.0-py3-none-any.whl",
+              "sha256": "8717693288720a8c6ebd07149c93ab0be1fced0b5191df9e9decd3263e20d85e",
+              "type": "zip",
+              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/*.pyc.*\",  # During pyc creation, temp files named *.pyc.NNN are created\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
+            }
+          },
+          "pypi__setuptools": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://files.pythonhosted.org/packages/4f/ab/0bcfebdfc3bfa8554b2b2c97a555569c4c1ebc74ea288741ea8326c51906/setuptools-68.1.2-py3-none-any.whl",
+              "sha256": "3d8083eed2d13afc9426f227b24fd1659489ec107c0e86cec2ffdde5c92e790b",
+              "type": "zip",
+              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/*.pyc.*\",  # During pyc creation, temp files named *.pyc.NNN are created\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
+            }
+          },
+          "pypi__zipp": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://files.pythonhosted.org/packages/8c/08/d3006317aefe25ea79d3b76c9650afabaf6d63d1c8443b236e7405447503/zipp-3.16.2-py3-none-any.whl",
+              "sha256": "679e51dd4403591b2d6838a48de3d283f3d188412a9782faadf845f298736ba0",
+              "type": "zip",
+              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/*.pyc.*\",  # During pyc creation, temp files named *.pyc.NNN are created\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
+            }
+          },
+          "pypi__colorama": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl",
+              "sha256": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6",
+              "type": "zip",
+              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/*.pyc.*\",  # During pyc creation, temp files named *.pyc.NNN are created\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
+            }
+          },
+          "pypi__build": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://files.pythonhosted.org/packages/58/91/17b00d5fac63d3dca605f1b8269ba3c65e98059e1fd99d00283e42a454f0/build-0.10.0-py3-none-any.whl",
+              "sha256": "af266720050a66c893a6096a2f410989eeac74ff9a68ba194b3f6473e8e26171",
+              "type": "zip",
+              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/*.pyc.*\",  # During pyc creation, temp files named *.pyc.NNN are created\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
+            }
+          },
+          "rules_python_internal": {
+            "bzlFile": "@@rules_python~//python/private:internal_config_repo.bzl",
+            "ruleClassName": "internal_config_repo",
+            "attributes": {}
+          },
+          "pypi__pip": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://files.pythonhosted.org/packages/50/c2/e06851e8cc28dcad7c155f4753da8833ac06a5c704c109313b8d5a62968a/pip-23.2.1-py3-none-any.whl",
+              "sha256": "7ccf472345f20d35bdc9d1841ff5f313260c2c33fe417f48c30ac46cccabf5be",
+              "type": "zip",
+              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/*.pyc.*\",  # During pyc creation, temp files named *.pyc.NNN are created\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
+            }
+          },
+          "pypi__installer": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://files.pythonhosted.org/packages/e5/ca/1172b6638d52f2d6caa2dd262ec4c811ba59eee96d54a7701930726bce18/installer-0.7.0-py3-none-any.whl",
+              "sha256": "05d1933f0a5ba7d8d6296bb6d5018e7c94fa473ceb10cf198a92ccea19c27b53",
+              "type": "zip",
+              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/*.pyc.*\",  # During pyc creation, temp files named *.pyc.NNN are created\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
+            }
+          },
+          "pypi__more_itertools": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://files.pythonhosted.org/packages/5a/cb/6dce742ea14e47d6f565589e859ad225f2a5de576d7696e0623b784e226b/more_itertools-10.1.0-py3-none-any.whl",
+              "sha256": "64e0735fcfdc6f3464ea133afe8ea4483b1c5fe3a3d69852e6503b43a0b222e6",
+              "type": "zip",
+              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/*.pyc.*\",  # During pyc creation, temp files named *.pyc.NNN are created\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
+            }
+          },
+          "pypi__tomli": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl",
+              "sha256": "939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc",
+              "type": "zip",
+              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/*.pyc.*\",  # During pyc creation, temp files named *.pyc.NNN are created\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
+            }
+          }
+        },
+        "recordedRepoMappingEntries": [
+          [
+            "rules_python~",
+            "bazel_tools",
+            "bazel_tools"
+          ]
+        ]
+      }
+    },
     "@@rules_rust~//rust:extensions.bzl%rust": {
       "general": {
-        "bzlTransitiveDigest": "G/wLdNGEZ+wTE5X7sNMIWO9k64G5ScbtIfLg3KYVtHQ=",
-        "usagesDigest": "9phHirh0kTteY+cW2lvjpjKZXTqO4m2SYlsbWWvKppM=",
+        "bzlTransitiveDigest": "hTsTBToWTKa5/pvoI8hsHVOMGC8UTvwiyeBhb6bF6nI=",
+        "usagesDigest": "8cVbIUvYwlUc+TUSdbm2FnFpLbUWkksiJjy/r7FjRdk=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -677,7 +2204,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "aarch64-unknown-linux-gnu",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -701,7 +2228,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "x86_64-unknown-linux-gnu",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -744,7 +2271,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "aarch64-unknown-linux-gnu",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -768,7 +2295,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "x86_64-unknown-linux-gnu",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -862,6 +2389,20 @@
               "exec_triple": "aarch64-unknown-linux-gnu"
             }
           },
+          "rust_analyzer_1.82.0_tools": {
+            "bzlFile": "@@rules_rust~//rust:repositories.bzl",
+            "ruleClassName": "rust_analyzer_toolchain_tools_repository",
+            "attributes": {
+              "version": "1.82.0",
+              "sha256s": {},
+              "urls": [
+                "https://static.rust-lang.org/dist/{}.tar.xz"
+              ],
+              "auth": {},
+              "netrc": "",
+              "auth_patterns": []
+            }
+          },
           "rust_windows_aarch64__x86_64-unknown-linux-gnu__stable_tools": {
             "bzlFile": "@@rules_rust~//rust:repositories.bzl",
             "ruleClassName": "rust_toolchain_tools_repository",
@@ -870,7 +2411,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "x86_64-unknown-linux-gnu",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -884,6 +2425,16 @@
               "auth": {},
               "netrc": "",
               "auth_patterns": []
+            }
+          },
+          "rust_analyzer_1.82.0": {
+            "bzlFile": "@@rules_rust~//rust:repositories.bzl",
+            "ruleClassName": "toolchain_repository_proxy",
+            "attributes": {
+              "toolchain": "@rust_analyzer_1.82.0_tools//:rust_analyzer_toolchain",
+              "toolchain_type": "@rules_rust//rust/rust_analyzer:toolchain_type",
+              "exec_compatible_with": [],
+              "target_compatible_with": []
             }
           },
           "rust_linux_aarch64__x86_64-unknown-linux-gnu__stable": {
@@ -932,7 +2483,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "x86_64-unknown-linux-gnu",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -956,7 +2507,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "aarch64-pc-windows-msvc",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -991,7 +2542,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "x86_64-pc-windows-msvc",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -1034,7 +2585,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "x86_64-unknown-linux-gnu",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -1058,7 +2609,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "aarch64-unknown-linux-gnu",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -1116,7 +2667,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "aarch64-unknown-linux-gnu",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -1140,7 +2691,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "x86_64-unknown-freebsd",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -1202,7 +2753,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "aarch64-unknown-linux-gnu",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -1226,7 +2777,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "aarch64-unknown-linux-gnu",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -1250,7 +2801,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "aarch64-unknown-linux-gnu",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -1274,7 +2825,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "x86_64-unknown-linux-gnu",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -1389,7 +2940,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "x86_64-unknown-linux-gnu",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -1512,20 +3063,6 @@
               ]
             }
           },
-          "rust_analyzer_1.81.0_tools": {
-            "bzlFile": "@@rules_rust~//rust:repositories.bzl",
-            "ruleClassName": "rust_analyzer_toolchain_tools_repository",
-            "attributes": {
-              "version": "1.81.0",
-              "sha256s": {},
-              "urls": [
-                "https://static.rust-lang.org/dist/{}.tar.xz"
-              ],
-              "auth": {},
-              "netrc": "",
-              "auth_patterns": []
-            }
-          },
           "rustfmt_nightly-2024-09-05__aarch64-pc-windows-msvc": {
             "bzlFile": "@@rules_rust~//rust:repositories.bzl",
             "ruleClassName": "toolchain_repository_proxy",
@@ -1567,7 +3104,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "aarch64-apple-darwin",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -1635,16 +3172,6 @@
               ]
             }
           },
-          "rust_analyzer_1.81.0": {
-            "bzlFile": "@@rules_rust~//rust:repositories.bzl",
-            "ruleClassName": "toolchain_repository_proxy",
-            "attributes": {
-              "toolchain": "@rust_analyzer_1.81.0_tools//:rust_analyzer_toolchain",
-              "toolchain_type": "@rules_rust//rust/rust_analyzer:toolchain_type",
-              "exec_compatible_with": [],
-              "target_compatible_with": []
-            }
-          },
           "rust_linux_s390x__s390x-unknown-linux-gnu__stable_tools": {
             "bzlFile": "@@rules_rust~//rust:repositories.bzl",
             "ruleClassName": "rust_toolchain_tools_repository",
@@ -1653,7 +3180,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "s390x-unknown-linux-gnu",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -1677,7 +3204,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "aarch64-unknown-linux-gnu",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -1779,7 +3306,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "x86_64-unknown-linux-gnu",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -1938,7 +3465,7 @@
             "ruleClassName": "toolchain_repository_hub",
             "attributes": {
               "toolchain_names": [
-                "rust_analyzer_1.81.0",
+                "rust_analyzer_1.82.0",
                 "rust_darwin_aarch64__aarch64-apple-darwin__stable",
                 "rust_darwin_aarch64__aarch64-unknown-linux-gnu__stable",
                 "rust_darwin_aarch64__x86_64-unknown-linux-gnu__stable",
@@ -1971,7 +3498,7 @@
                 "rustfmt_nightly-2024-09-05__x86_64-unknown-linux-gnu"
               ],
               "toolchain_labels": {
-                "rust_analyzer_1.81.0": "@rust_analyzer_1.81.0_tools//:rust_analyzer_toolchain",
+                "rust_analyzer_1.82.0": "@rust_analyzer_1.82.0_tools//:rust_analyzer_toolchain",
                 "rust_darwin_aarch64__aarch64-apple-darwin__stable": "@rust_darwin_aarch64__aarch64-apple-darwin__stable_tools//:rust_toolchain",
                 "rust_darwin_aarch64__aarch64-unknown-linux-gnu__stable": "@rust_darwin_aarch64__aarch64-unknown-linux-gnu__stable_tools//:rust_toolchain",
                 "rust_darwin_aarch64__x86_64-unknown-linux-gnu__stable": "@rust_darwin_aarch64__x86_64-unknown-linux-gnu__stable_tools//:rust_toolchain",
@@ -2004,7 +3531,7 @@
                 "rustfmt_nightly-2024-09-05__x86_64-unknown-linux-gnu": "@rustfmt_nightly-2024-09-05__x86_64-unknown-linux-gnu_tools//:rustfmt_toolchain"
               },
               "toolchain_types": {
-                "rust_analyzer_1.81.0": "@rules_rust//rust/rust_analyzer:toolchain_type",
+                "rust_analyzer_1.82.0": "@rules_rust//rust/rust_analyzer:toolchain_type",
                 "rust_darwin_aarch64__aarch64-apple-darwin__stable": "@rules_rust//rust:toolchain",
                 "rust_darwin_aarch64__aarch64-unknown-linux-gnu__stable": "@rules_rust//rust:toolchain",
                 "rust_darwin_aarch64__x86_64-unknown-linux-gnu__stable": "@rules_rust//rust:toolchain",
@@ -2037,7 +3564,7 @@
                 "rustfmt_nightly-2024-09-05__x86_64-unknown-linux-gnu": "@rules_rust//rust/rustfmt:toolchain_type"
               },
               "exec_compatible_with": {
-                "rust_analyzer_1.81.0": [],
+                "rust_analyzer_1.82.0": [],
                 "rust_darwin_aarch64__aarch64-apple-darwin__stable": [
                   "@platforms//cpu:aarch64",
                   "@platforms//os:osx"
@@ -2160,7 +3687,7 @@
                 ]
               },
               "target_compatible_with": {
-                "rust_analyzer_1.81.0": [],
+                "rust_analyzer_1.82.0": [],
                 "rust_darwin_aarch64__aarch64-apple-darwin__stable": [
                   "@platforms//cpu:aarch64",
                   "@platforms//os:osx"
@@ -2268,7 +3795,7 @@
               "allocator_library": "@rules_rust//ffi/cc/allocator_library",
               "global_allocator_library": "@rules_rust//ffi/cc/global_allocator_library",
               "target_triple": "x86_64-apple-darwin",
-              "version": "1.81.0",
+              "version": "1.82.0",
               "rustfmt_version": "nightly/2024-09-05",
               "edition": "2021",
               "dev_components": false,
@@ -2321,8 +3848,8 @@
     },
     "@@rules_rust~//rust/private:extensions.bzl%i": {
       "general": {
-        "bzlTransitiveDigest": "OKvkUvI0yTQ3vog56czcRPVfUHEYTkYZODwGYcVfkWg=",
-        "usagesDigest": "Nl3VPnt9LvipEVudMQsMtOnMfgBf1YooPs1t7BXpqGU=",
+        "bzlTransitiveDigest": "A8qVTxGqWNxC/i2CKsmLCKhLHLAKqSrowxtLmgap3bA=",
+        "usagesDigest": "ZZEUefWf8MERmnCauRnMvq2JYr/6042nYCYeYNbnS6M=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -7991,6 +9518,19 @@
               "build_file": "@@rules_rust~//crate_universe/3rdparty/crates:BUILD.log-0.4.19.bazel"
             }
           },
+          "cui__cfg-expr-0.17.0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "sha256": "d0890061c4d3223e7267f3bad2ec40b997d64faac1c2815a4a9d95018e2b9e9c",
+              "type": "tar.gz",
+              "urls": [
+                "https://static.crates.io/crates/cfg-expr/0.17.0/download"
+              ],
+              "strip_prefix": "cfg-expr-0.17.0",
+              "build_file": "@@rules_rust~//crate_universe/3rdparty/crates:BUILD.cfg-expr-0.17.0.bazel"
+            }
+          },
           "cui__wasm-bindgen-backend-0.2.87": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -8716,19 +10256,6 @@
               ],
               "strip_prefix": "tower-layer-0.3.3",
               "build_file": "@@rules_rust~//proto/prost/private/3rdparty/crates:BUILD.tower-layer-0.3.3.bazel"
-            }
-          },
-          "cui__cfg-expr-0.15.5": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "sha256": "03915af431787e6ffdcc74c645077518c6b6e01f80b761e0fbbfa288536311b3",
-              "type": "tar.gz",
-              "urls": [
-                "https://static.crates.io/crates/cfg-expr/0.15.5/download"
-              ],
-              "strip_prefix": "cfg-expr-0.15.5",
-              "build_file": "@@rules_rust~//crate_universe/3rdparty/crates:BUILD.cfg-expr-0.15.5.bazel"
             }
           },
           "cui__prodash-26.2.2": {
@@ -12736,7 +14263,7 @@
             "cui__cargo-platform-0.1.4",
             "cui__cargo_metadata-0.18.1",
             "cui__cargo_toml-0.19.2",
-            "cui__cfg-expr-0.15.5",
+            "cui__cfg-expr-0.17.0",
             "cui__clap-4.3.11",
             "cui__crates-index-2.2.0",
             "cui__hex-0.4.3",
@@ -12873,8 +14400,8 @@
           ],
           [
             "rules_rust~",
-            "cui__cfg-expr-0.15.5",
-            "rules_rust~~i~cui__cfg-expr-0.15.5"
+            "cui__cfg-expr-0.17.0",
+            "rules_rust~~i~cui__cfg-expr-0.17.0"
           ],
           [
             "rules_rust~",
@@ -13247,7 +14774,7 @@
     "@@toolchains_llvm~//toolchain/extensions:llvm.bzl%llvm": {
       "general": {
         "bzlTransitiveDigest": "fGPyr+7psAXEyL7zsvVsrVKES6+tT7A2w8oIztjS82k=",
-        "usagesDigest": "9Wz/Xd6F/H0hsCEXmq7nUYBxvnmVWys7erCqrqkMtww=",
+        "usagesDigest": "5d/B2tlgNuu/d2KTcqGwerrczWinmg2J2qzilRNBaVA=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -13272,7 +14799,7 @@
               "link_flags": {},
               "link_libs": {},
               "llvm_versions": {
-                "": "18.1.2"
+                "": "19.1.0"
               },
               "opt_compile_flags": {},
               "opt_link_flags": {},
@@ -13299,7 +14826,7 @@
               "exec_arch": "",
               "exec_os": "",
               "llvm_mirror": "",
-              "llvm_version": "18.1.2",
+              "llvm_version": "19.1.0",
               "llvm_versions": {},
               "netrc": "",
               "sha256": {},

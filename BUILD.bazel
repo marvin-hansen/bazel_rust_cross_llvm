@@ -1,5 +1,21 @@
-load("@rules_rust//rust:defs.bzl", "rust_binary")
+load("@rules_oci//oci:defs.bzl", "oci_push")
+load("@rules_rust//rust:defs.bzl", "rust_binary", "rust_doc", "rust_doc_test")
+load("//:build/binary.bzl", "build_binary_opt")
+load("//:build/container.bzl", "build_multi_arch_image", "tag_with_commit_and_timestamp")
 
+###############################################################################
+# This setting is needed for release mode compiler optimization
+###############################################################################
+config_setting(
+    name = "release",
+    values = {
+        "compilation_mode": "opt",
+    },
+)
+
+###############################################################################
+# Rust Binary
+###############################################################################
 package(default_visibility = ["//visibility:public"])
 
 filegroup(
@@ -49,6 +65,28 @@ rust_binary(
     ],
 )
 
+###############################################################################
+# Documentation
+###############################################################################
+# Only generate the docs once for the host platform.
+rust_doc(
+    name = "doc",
+    crate = ":hello_world_host",
+    tags = ["doc"],
+    visibility = ["//visibility:public"],
+)
+
+rust_doc_test(
+    name = "doc_test",
+    crate = ":hello_world_host",
+    tags = ["doc-test"],
+    visibility = ["//visibility:public"],
+)
+
+###############################################################################
+# Tests
+###############################################################################
+
 # Test if the host binary works.
 # Note, we cannot test for platform since Bazel determines the host platform automatically
 sh_test(
@@ -95,4 +133,42 @@ sh_test(
     deps = [
         "@bazel_tools//tools/bash/runfiles",
     ],
+)
+
+###############################################################################
+# OCI Container Image
+###############################################################################
+
+# Note, build_multi_arch_image uses platform transition internally so you only
+# need to declare a binary once for the host platform and this rule does all the heavy lifting for you
+# to create a new binary for each platform and stuff them all into a proper multi-arch OCI image.
+build_multi_arch_image(
+    name = "image_index",
+    srcs = ["hello_world_host"],
+    base = "//images/base_image",
+    entry_point = "hello_world_host",
+    exposed_ports = [
+        "8080",
+    ],
+    platforms = [
+        "//build/platforms:linux-x86_64",
+        "//build/platforms:linux-aarch64",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+# Tag example: 458b6779-1729045897
+# This tag format is unique, immutable, and sortable
+# because some CI systems (i.e. FluxCD) require sortable image tags.
+tag_with_commit_and_timestamp(
+    name = "remote_tag",
+    target = ":image_index",
+)
+
+oci_push(
+    name = "push",
+    image = ":image_index",
+    remote_tags = ":remote_tag",
+    repository = "myregistry/myrepo/hello_world_multiarch",
+    visibility = ["//visibility:public"],
 )

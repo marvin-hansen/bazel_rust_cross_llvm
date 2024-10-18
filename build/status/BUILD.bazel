@@ -1,0 +1,25 @@
+###############################################################################
+# BUILD STATUS
+###############################################################################
+# These rule are used to generate image tags with the rule git_tag_with_timestamp
+# defined in build/container.bzl.
+
+# Generate stable status
+genrule(
+    name = "stable_status",
+    srcs = [],
+    outs = ["stable_status.txt"],
+    cmd = """cat bazel-out/stable-status.txt > $@""",
+    stamp = True,
+    visibility = ["//visibility:public"],
+)
+
+# Generate volatile status
+genrule(
+    name = "volatile_status",
+    srcs = [],
+    outs = ["volatile_status.txt"],
+    cmd = """cat bazel-out/volatile-status.txt > $@""",
+    stamp = True,
+    visibility = ["//visibility:public"],
+)
