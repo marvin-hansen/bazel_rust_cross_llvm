@@ -39,7 +39,7 @@ This may take a while because three binaries with all dependencies are built and
 
 ## Cross compilation
 
-The actual cross compilation is handled using the platform_transition_binary from the Aspect rule.
+The actual cross compilation is handled by the platform_transition_binary from the Aspect rule.
 For example, when targeting linux on Arm, you would add the following to your BUILD file:
 
 ```
@@ -50,7 +50,7 @@ platform_transition_binary(
 )
 ```
 
-Here, hello_world_host is a a regular Rust binary. 
+Here, hello_world_host is a regular Rust binary. 
 
 ## Release Mode Optimization
 
@@ -62,7 +62,7 @@ By default, Bazel compiles everything in debug mode unless the `-c opt` flag is 
 * "-Copt-level=3",
 * "-Cstrip=symbols",
 
-All these optimizations have been wrapped in a custom Rust binary rule that serves as a drop in replace for the conventional rust_binary rule:
+All optimizations have been wrapped in a custom Rust binary rule that serves as a drop in replace for the conventional rust_binary rule:
 
 ```
 load("//:build/binary.bzl", "build_binary_opt")
@@ -80,7 +80,7 @@ build_binary_opt(
 )
 ```
 
-Note, the compiler optimization is only when you pass the `-c opt` flag on the command line i.e. when building on CI.
+Note, the compiler optimization is only applied when you pass the `-c opt` flag on the command line.
 
 ## Sysroot
 
@@ -98,24 +98,23 @@ This repository comes with two additional branches:
 * `small-clang`: Replaces the full LLVM toolchain with a smaller version that only contains CLang and a few tools.
 * `llvm_musl`: Only declares a small host clang toolchain and uses MUSL to cross compile all other targets.
 
-The motivation for small-clang is that it is a much smaller toolchain, about 10% the size of the full llvm toolchain
-and therefore reduces download times especially on clean CI builds.
+The motivation for small-clang is that it is a much smaller toolchain, 
+about 10% the size of the full llvm toolchain and therefore reduces download times especially on clean CI builds.
 
-The motivation for llvm_musl is that MUSL simply compiles significantly faster than the full llvm toolchain. Ideally,
-MUSL could also be used as host toolchain, but that has been proven complex to configure due to an issue with how
-rules_rules identify the host toolchain on Linux. On MacOS, MUSL works as host toolchain, on Linux (X86_64) it does not,
-hence the need for llvm as host toolchain.
+The motivation for llvm_musl is that MUSL simply compiles significantly faster than 
+the full llvm toolchain. Ideally, MUSL could also be used as host toolchain, but that has been proven complex to configure due to how  rules_rules identify the host toolchain on Linux. 
+On MacOS, MUSL works as host toolchain, on Linux (X86_64) it does not, hence the need for llvm as host toolchain.
 
 ## Secure Chainguard Base Image
 
 Chainguard pioneered the un-distro wolfi and with it the secure base image. Unlike Distroless,
-the Chainguard base image does not have Linux Kernel (one less to patch) 
-is updated within 24 hours whenever one of its dependencies receives an update. [Rules Apko ](https://github.com/chainguard-dev/rules_apko)take the idea 
-one step further and, instead of pulling in an external base image, the base image is updated and build with every
+the Chainguard base image does not have Linux Kernel (one less to patch)  and is updated 
+within 24 hours whenever one of its dependencies receives an update. 
+[Rules Apko ](https://github.com/chainguard-dev/rules_apko)take the idea one step further and, 
+instead of pulling in an external base image, the base image is updated and build with every
 bazel build thus ensuring the Chainguard base image always comes with the latest libc and all available security patches.
 
-That means, instead of late patching whenever a new CVE makes headlines, 
-you just rebuild and release with Bazel knowing the latest security patches have already been applied to all of your containers. 
+That means you just build and release with Bazel knowing the latest security patches have already been applied to all of your containers. 
 
 This demo repo has already configured, built and tested the Chainguard base image for the following target platforms:
 * linux-x86_64, 
