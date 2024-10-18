@@ -6,7 +6,7 @@ module(
 ###############################################################################
 # B A Z E L   D E P E N D E N C I E S # https://registry.bazel.build/
 ###############################################################################
-
+bazel_dep(name = "aspect_bazel_lib", version = "2.9.2")
 bazel_dep(name = "rules_apko", version = "1.4.0")
 bazel_dep(name = "rules_rust", version = "0.52.2")
 bazel_dep(name = "rules_pkg", version = "1.0.1")

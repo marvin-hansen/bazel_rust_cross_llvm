@@ -1,5 +1,6 @@
+load("@aspect_bazel_lib//lib:transitions.bzl", "platform_transition_binary")
 load("@rules_oci//oci:defs.bzl", "oci_push")
-load("@rules_rust//rust:defs.bzl", "rust_binary", "rust_doc", "rust_doc_test")
+load("@rules_rust//rust:defs.bzl", "rust_doc", "rust_doc_test")
 load("//:build/binary.bzl", "build_binary_opt")
 load("//:build/container.bzl", "build_multi_arch_image", "tag_with_commit_and_timestamp")
 
@@ -27,7 +28,7 @@ filegroup(
     ],
 )
 
-rust_binary(
+build_binary_opt(
     name = "hello_world_host",
     srcs = ["src/main.rs"],
     deps = [
@@ -39,30 +40,17 @@ rust_binary(
     ],
 )
 
-rust_binary(
+# https://docs.aspect.build/rulesets/aspect_bazel_lib/docs/transitions/#platform_transition_binary
+platform_transition_binary(
     name = "hello_world_x86_64",
-    srcs = ["src/main.rs"],
-    platform = "//build/platforms:linux-x86_64",
-    deps = [
-        # External crates
-        "//thirdparty/crates:mimalloc",
-        "//thirdparty/crates:lz4-sys",
-        "//thirdparty/crates:diesel",
-        "//thirdparty/crates:tokio",
-    ],
+    binary = ":hello_world_host",
+    target_platform ="//build/platforms:linux-x86_64",
 )
 
-rust_binary(
+platform_transition_binary(
     name = "hello_world_aarch64",
-    srcs = ["src/main.rs"],
-    platform = "//build/platforms:linux-aarch64",
-    deps = [
-        # External crates
-        "//thirdparty/crates:mimalloc",
-        "//thirdparty/crates:lz4-sys",
-        "//thirdparty/crates:diesel",
-        "//thirdparty/crates:tokio",
-    ],
+    binary = ":hello_world_host",
+    target_platform = "//build/platforms:linux-aarch64",
 )
 
 ###############################################################################
@@ -142,6 +130,7 @@ sh_test(
 # Note, build_multi_arch_image uses platform transition internally so you only
 # need to declare a binary once for the host platform and this rule does all the heavy lifting for you
 # to create a new binary for each platform and stuff them all into a proper multi-arch OCI image.
+# If you only deliver an OCI image, you can remove the platform_transition_binaries defined above.
 build_multi_arch_image(
     name = "image_index",
     srcs = ["hello_world_host"],
