@@ -33,6 +33,8 @@ test --verbose_failures
 
 # Enable Bzlmod for every Bazel command
 common --enable_bzlmod
+# Disable workspace support by default as its gone with Bazel 8 and will be removed
+common --noenable_workspace
 
 # Allow + in repo names for Bazel 8
 # common --incompatible_use_plus_in_repo_names
