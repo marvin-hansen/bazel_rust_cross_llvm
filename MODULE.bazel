@@ -7,7 +7,10 @@ module(
 # B A Z E L   D E P E N D E N C I E S # https://registry.bazel.build/
 ###############################################################################
 
+# Any version of rules_rust above 0.54.1 breaks the build due to an unknown bug
+# bazel_dep(name = "rules_rust", version = "0.56.0")
 bazel_dep(name = "rules_rust", version = "0.54.1")
+
 bazel_dep(name = "platforms", version = "0.0.10")
 bazel_dep(name = "toolchains_llvm", version = "1.2.0", dev_dependency = True)
 
