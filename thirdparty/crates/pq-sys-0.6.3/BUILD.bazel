@@ -28,19 +28,18 @@ rust_library(
             "WORKSPACE",
             "WORKSPACE.bazel",
         ],
-    ),
+    ) + [
+        "@@libpq+//:libpq",
+    ],
     crate_features = [
         "default",
     ],
     crate_root = "src/lib.rs",
-    data = [
-        "@@libpq~~_repo_rules~postgres//:libpq",
-    ],
     edition = "2015",
     rustc_flags = [
         "--cap-lints=allow",
         "-L",
-        "$(BINDIR)/external/libpq~~_repo_rules~postgres",
+        "$(BINDIR)/external/libpq+",
     ],
     tags = [
         "cargo-bazel",
@@ -74,6 +73,7 @@ rust_library(
         "@rules_rust//rust/platform:thumbv7em-none-eabi": [],
         "@rules_rust//rust/platform:thumbv8m.main-none-eabi": [],
         "@rules_rust//rust/platform:wasm32-unknown-unknown": [],
+        "@rules_rust//rust/platform:wasm32-wasi": [],
         "@rules_rust//rust/platform:wasm32-wasip1": [],
         "@rules_rust//rust/platform:x86_64-apple-darwin": [],
         "@rules_rust//rust/platform:x86_64-apple-ios": [],

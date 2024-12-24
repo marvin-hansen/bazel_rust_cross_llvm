@@ -8,10 +8,10 @@ crates_vendor(
                 build_script_env = {
                     "PQ_LIB_STATIC": "1",
                 },
-                data = ["@@libpq~~_repo_rules~postgres//:libpq"],
+                compile_data = ["@@libpq+//:libpq"],
                 rustc_flags = [
                     "-L",
-                    "$(BINDIR)/external/libpq~~_repo_rules~postgres",
+                    "$(BINDIR)/external/libpq+",
                 ],
             ),
         ],

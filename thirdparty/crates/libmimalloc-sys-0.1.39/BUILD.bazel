@@ -66,6 +66,7 @@ rust_library(
         "@rules_rust//rust/platform:thumbv7em-none-eabi": [],
         "@rules_rust//rust/platform:thumbv8m.main-none-eabi": [],
         "@rules_rust//rust/platform:wasm32-unknown-unknown": [],
+        "@rules_rust//rust/platform:wasm32-wasi": [],
         "@rules_rust//rust/platform:wasm32-wasip1": [],
         "@rules_rust//rust/platform:x86_64-apple-darwin": [],
         "@rules_rust//rust/platform:x86_64-apple-ios": [],
@@ -134,7 +135,7 @@ cargo_build_script(
     version = "0.1.39",
     visibility = ["//visibility:private"],
     deps = [
-        "//thirdparty/crates/cc-1.2.4:cc",
+        "//thirdparty/crates/cc-1.2.5:cc",
     ],
 )
 
