@@ -10,11 +10,7 @@ bazel_dep(name = "aspect_bazel_lib", version = "2.9.4")
 bazel_dep(name = "bazel_skylib", version = "1.7.1")
 bazel_dep(name = "platforms", version = "0.0.10")
 bazel_dep(name = "rules_apko", version = "1.4.0")
-
-# Any version of rules_rust above 0.54.1 breaks the build due to an unknown bug
-# bazel_dep(name = "rules_rust", version = "0.56.0")
-bazel_dep(name = "rules_rust", version = "0.54.1")
-
+bazel_dep(name = "rules_rust", version = "0.56.0")
 bazel_dep(name = "rules_pkg", version = "1.0.1")
 bazel_dep(name = "rules_oci", version = "2.0.1")
 bazel_dep(name = "toolchains_llvm", version = "1.2.0", dev_dependency = True)
@@ -23,7 +19,7 @@ bazel_dep(name = "toolchains_llvm", version = "1.2.0", dev_dependency = True)
 bazel_dep(name = "libpq", version = "0.0.1")
 git_override(
     module_name = "libpq",
-    commit = "ebdeb0cc9b8e051779e00b37ec0f93fab9ba8dd8",
+    commit = "84ce14a248e583146e76fe6899a004cb2310f75c",
     remote = "https://github.com/brainhivenl/libpq",
 )
 
