@@ -28,19 +28,18 @@ rust_library(
             "WORKSPACE",
             "WORKSPACE.bazel",
         ],
-    ),
+    ) + [
+        "@@libpq+//:libpq",
+    ],
     crate_features = [
         "default",
     ],
     crate_root = "src/lib.rs",
-    data = [
-        "@@libpq~~_repo_rules~postgres//:libpq",
-    ],
     edition = "2015",
     rustc_flags = [
         "--cap-lints=allow",
         "-L",
-        "$(BINDIR)/external/libpq~~_repo_rules~postgres",
+        "$(BINDIR)/external/libpq+",
     ],
     tags = [
         "cargo-bazel",

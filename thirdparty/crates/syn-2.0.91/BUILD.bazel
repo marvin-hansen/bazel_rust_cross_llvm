@@ -6,12 +6,12 @@
 #     bazel run @@//thirdparty:crates_vendor
 ###############################################################################
 
-load("@rules_rust//rust:defs.bzl", "rust_proc_macro")
+load("@rules_rust//rust:defs.bzl", "rust_library")
 
 package(default_visibility = ["//visibility:public"])
 
-rust_proc_macro(
-    name = "tokio_macros",
+rust_library(
+    name = "syn",
     srcs = glob(
         include = ["**/*.rs"],
         allow_empty = False,
@@ -28,6 +28,18 @@ rust_proc_macro(
             "WORKSPACE.bazel",
         ],
     ),
+    crate_features = [
+        "clone-impls",
+        "default",
+        "derive",
+        "extra-traits",
+        "fold",
+        "full",
+        "parsing",
+        "printing",
+        "proc-macro",
+        "visit",
+    ],
     crate_root = "src/lib.rs",
     edition = "2021",
     rustc_flags = [
@@ -35,7 +47,7 @@ rust_proc_macro(
     ],
     tags = [
         "cargo-bazel",
-        "crate-name=tokio-macros",
+        "crate-name=syn",
         "manual",
         "noclippy",
         "norustfmt",
@@ -65,7 +77,6 @@ rust_proc_macro(
         "@rules_rust//rust/platform:thumbv7em-none-eabi": [],
         "@rules_rust//rust/platform:thumbv8m.main-none-eabi": [],
         "@rules_rust//rust/platform:wasm32-unknown-unknown": [],
-        "@rules_rust//rust/platform:wasm32-wasi": [],
         "@rules_rust//rust/platform:wasm32-wasip1": [],
         "@rules_rust//rust/platform:x86_64-apple-darwin": [],
         "@rules_rust//rust/platform:x86_64-apple-ios": [],
@@ -78,10 +89,10 @@ rust_proc_macro(
         "@rules_rust//rust/platform:x86_64-unknown-none": [],
         "//conditions:default": ["@platforms//:incompatible"],
     }),
-    version = "2.4.0",
+    version = "2.0.91",
     deps = [
         "//thirdparty/crates/proc-macro2-1.0.92:proc_macro2",
         "//thirdparty/crates/quote-1.0.37:quote",
-        "//thirdparty/crates/syn-2.0.91:syn",
+        "//thirdparty/crates/unicode-ident-1.0.14:unicode_ident",
     ],
 )

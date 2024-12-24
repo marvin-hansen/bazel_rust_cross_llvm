@@ -85,6 +85,6 @@ rust_library(
         "//thirdparty/crates/heck-0.5.0:heck",
         "//thirdparty/crates/proc-macro2-1.0.92:proc_macro2",
         "//thirdparty/crates/quote-1.0.37:quote",
-        "//thirdparty/crates/syn-2.0.90:syn",
+        "//thirdparty/crates/syn-2.0.91:syn",
     ],
 )
