@@ -7,7 +7,7 @@ module(
 # B A Z E L   D E P E N D E N C I E S # https://registry.bazel.build/
 ###############################################################################
 
-bazel_dep(name = "rules_rust", version = "0.51.0")
+bazel_dep(name = "rules_rust", version = "0.56.0")
 bazel_dep(name = "platforms", version = "0.0.10")
 bazel_dep(name = "toolchains_llvm", version = "1.2.0", dev_dependency = True)
 bazel_dep(name = "toolchains_musl", version = "0.1.20", dev_dependency = True)
@@ -16,7 +16,7 @@ bazel_dep(name = "toolchains_musl", version = "0.1.20", dev_dependency = True)
 bazel_dep(name = "libpq", version = "0.0.1")
 git_override(
     module_name = "libpq",
-    commit = "ebdeb0cc9b8e051779e00b37ec0f93fab9ba8dd8",
+    commit = "84ce14a248e583146e76fe6899a004cb2310f75c",
     remote = "https://github.com/brainhivenl/libpq",
 )
 
@@ -33,7 +33,7 @@ llvm.toolchain(
         # Generate checksums with shasum -a 256 filename.tar.zst
         "darwin-aarch64": "",
         "darwin-x86_64": "",
-        "linux-x86_64": "",
+        "linux-aarch64": "",
         "linux-x86_64": "",
     },
     stdlib = {
@@ -60,7 +60,7 @@ register_toolchains("@llvm_toolchain//:all")
 ###############################################################################
 RUST_EDITION = "2021"  # NOTE: 2024 will be released with Rust 1.86.0
 
-RUST_VERSION = "1.81.0"
+RUST_VERSION = "1.83.0"
 
 # https://github.com/bazelbuild/rules_rust/releases
 rust = use_extension("@rules_rust//rust:extensions.bzl", "rust")

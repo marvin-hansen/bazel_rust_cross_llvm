@@ -5,14 +5,14 @@ crates_vendor(
     annotations = {
         "pq-sys": [
             crate.annotation(
-                build_script_env = {
-                    "PQ_LIB_STATIC": "1",
-                },
-                data = ["@@libpq~~_repo_rules~postgres//:libpq"],
-                rustc_flags = [
-                    "-L",
-                    "$(BINDIR)/external/libpq~~_repo_rules~postgres",
-                ],
+                    build_script_env = {
+                        "PQ_LIB_STATIC": "1",
+                    },
+                    compile_data = ["@@libpq+//:libpq"],
+                    rustc_flags = [
+                        "-L",
+                        "$(BINDIR)/external/libpq+",
+                    ],
             ),
         ],
     },
