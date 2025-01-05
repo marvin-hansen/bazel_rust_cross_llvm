@@ -1,4 +1,7 @@
-load("@rules_rust//rust:defs.bzl", "rust_binary")
+load("@rules_oci//oci:defs.bzl", "oci_push")
+load("@rules_rust//rust:defs.bzl", "rust_binary", "rust_doc", "rust_doc_test")
+load("//:build/binary.bzl", "build_binary_opt")
+load("//:build/container.bzl", "build_multi_arch_image", "git_with_timestamp_tag")
 
 package(default_visibility = ["//visibility:public"])
 
@@ -95,4 +98,70 @@ sh_test(
     deps = [
         "@bazel_tools//tools/bash/runfiles",
     ],
+)
+
+###############################################################################
+# RUST RELEASE MODE OPTIMIZATION
+###############################################################################
+config_setting(
+    name = "release",
+    values = {
+        "compilation_mode": "opt",
+    },
+)
+
+###############################################################################
+# Rust Binary compiler optimized for production
+###############################################################################
+build_binary_opt(
+    name = "hello_world_bin",
+    srcs = ["src/main.rs"],
+    deps = [
+        # External crates
+        "//thirdparty/crates:mimalloc",
+        "//thirdparty/crates:lz4-sys",
+        "//thirdparty/crates:diesel",
+        "//thirdparty/crates:tokio",
+    ],
+)
+
+###############################################################################
+# Documentation
+###############################################################################
+rust_doc(
+    name = "doc",
+    crate = ":hello_world_bin",
+    tags = ["doc"],
+    visibility = ["//visibility:public"],
+)
+
+rust_doc_test(
+    name = "doc_test",
+    crate = ":hello_world_bin",
+    tags = ["doc-test"],
+    visibility = ["//visibility:public"],
+)
+
+###############################################################################
+# OCI Container Image
+###############################################################################
+build_multi_arch_image(
+    name = "image_index",
+    srcs = ["hello_world_bin"],
+    base = "@scratch",
+    entry_point = "hello_world_bin",
+    exposed_ports = [
+        "7070",
+        "8080",
+    ],
+    platforms = [
+        "//build/platforms:linux-x86_64",
+        "//build/platforms:linux-aarch64",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+git_with_timestamp_tag(
+    name = "remote_tag",
+    target = ":image_index",
 )

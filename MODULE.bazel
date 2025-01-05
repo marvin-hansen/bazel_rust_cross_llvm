@@ -9,6 +9,10 @@ module(
 
 bazel_dep(name = "rules_rust", version = "0.56.0")
 bazel_dep(name = "platforms", version = "0.0.10")
+bazel_dep(name = "rules_pkg", version = "1.0.1")
+bazel_dep(name = "rules_oci", version = "2.2.0")
+
+# Toolchains
 bazel_dep(name = "toolchains_llvm", version = "1.2.0", dev_dependency = True)
 bazel_dep(name = "toolchains_musl", version = "0.1.20", dev_dependency = True)
 
@@ -78,3 +82,37 @@ register_toolchains("@rust_toolchains//:all")
 
 # Rust dependencies are vendored; see:
 # //thirdparty/BUILD.bazel
+
+###############################################################################
+# OCI base images  #
+###############################################################################
+
+oci = use_extension("@rules_oci//oci:extensions.bzl", "oci")
+
+# https://github.com/GoogleContainerTools/distroless
+oci.pull(
+    name = "distroless",
+    digest = "sha256:e1065a1d58800a7294f74e67c32ec4146d09d6cbe471c1fa7ed456b2d2bf06e0",
+    image = "gcr.io/distroless/cc-debian12",
+    platforms = [
+        "linux/amd64",
+        "linux/arm64/v8",
+    ],
+)
+use_repo(oci, "distroless")
+
+# https://hub.docker.com/repository/docker/hansenmarvin/rust-scratch/general
+oci.pull(
+    name = "scratch",
+    # digest = "sha256:d77f14a6775afcda58344b0ababf522e81063ff1b2a680dc2075de52a83a8ba3",
+    tag = "latest",
+    # https://stackoverflow.com/questions/34198392/docker-official-registry-docker-hub-url
+    image = "docker.io/hansenmarvin/rust-scratch",
+    platforms = [
+        "linux/amd64",
+        "linux/arm64",
+    ],
+)
+use_repo(oci,
+ "distroless_linux_amd64", "distroless_linux_arm64_v8",
+ "scratch", "scratch_linux_amd64", "scratch_linux_arm64")
