@@ -11,6 +11,7 @@ bazel_dep(name = "bazel_skylib", version = "1.7.1")
 bazel_dep(name = "rules_rust", version = "0.56.0")
 bazel_dep(name = "platforms", version = "0.0.10")
 bazel_dep(name = "rules_pkg", version = "1.0.1")
+bazel_dep(name = "rules_python", version = "1.0.0")
 bazel_dep(name = "rules_oci", version = "2.2.0")
 bazel_dep(name = "rules_shell",version = "0.3.0")
 
@@ -124,6 +125,17 @@ register_toolchains("@rust_toolchains//:all")
 toolchains_musl = use_extension("@toolchains_musl//:toolchains_musl.bzl", "toolchains_musl", dev_dependency = True)
 toolchains_musl.config(
     extra_target_compatible_with = ["@//build/linker_config:musl"],
+)
+
+###############################################################################
+# Python toolchain
+# https://github.com/bazelbuild/rules_python
+###############################################################################
+python = use_extension("@rules_python//python/extensions:python.bzl", "python")
+python.toolchain(
+    configure_coverage_tool = False,
+    ignore_root_user_error = True,
+    python_version = "3.11",
 )
 
 ###############################################################################
