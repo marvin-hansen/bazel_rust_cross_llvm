@@ -7,13 +7,14 @@ module(
 # B A Z E L   D E P E N D E N C I E S # https://registry.bazel.build/
 ###############################################################################
 
+bazel_dep(name = "bazel_skylib", version = "1.7.1")
 bazel_dep(name = "rules_rust", version = "0.56.0")
 bazel_dep(name = "platforms", version = "0.0.10")
 bazel_dep(name = "rules_pkg", version = "1.0.1")
 bazel_dep(name = "rules_oci", version = "2.2.0")
+bazel_dep(name = "rules_shell",version = "0.3.0")
 
 # Toolchains
-bazel_dep(name = "toolchains_llvm", version = "1.2.0", dev_dependency = True)
 bazel_dep(name = "toolchains_musl", version = "0.1.20", dev_dependency = True)
 
 # https://github.com/brainhivenl/libpq
@@ -24,40 +25,6 @@ git_override(
     remote = "https://github.com/brainhivenl/libpq",
 )
 
-###############################################################################
-# Small LLVM toolchain #
-# https://github.com/MaterializeInc/toolchains/releases/
-###############################################################################
-
-# Here we set only a host toolchain for Apple Silicon and Linux on X86/64.
-llvm = use_extension("@toolchains_llvm//toolchain/extensions:llvm.bzl", "llvm")
-llvm.toolchain(
-    llvm_version = "18.1.8",
-    sha256 = {
-        # Generate checksums with shasum -a 256 filename.tar.zst
-        "darwin-aarch64": "",
-        "darwin-x86_64": "",
-        "linux-aarch64": "",
-        "linux-x86_64": "",
-    },
-    stdlib = {
-        "linux-x86_64": "stdc++",
-        "linux-aarch64": "stdc++",
-    },
-    urls = {
-        "darwin-aarch64": ["https://github.com/MaterializeInc/toolchains/releases/download/clang-18.1.8-4/darwin_aarch64.tar.zst"],
-        "darwin-x86_64": ["https://github.com/MaterializeInc/toolchains/releases/download/clang-18.1.8-4/darwin_x86_64.tar.zst"],
-        "linux-aarch64": ["https://github.com/MaterializeInc/toolchains/releases/download/clang-18.1.8-4/linux_aarch64.tar.zst"],
-        "linux-x86_64": ["https://github.com/MaterializeInc/toolchains/releases/download/clang-18.1.8-4/linux_x86_64.tar.zst"],
-    },
-)
-
-# No LLVM sysroots are required since we use MUSL to cross compile.
-# Notice, the Rust target triplets have been changed to MUSL targets.
-
-use_repo(llvm, "llvm_toolchain", "llvm_toolchain_llvm")
-
-register_toolchains("@llvm_toolchain//:all")
 
 ###############################################################################
 # Rust toolchain #
@@ -66,15 +33,82 @@ RUST_EDITION = "2021"  # NOTE: 2024 will be released with Rust 1.86.0
 
 RUST_VERSION = "1.83.0"
 
-# https://github.com/bazelbuild/rules_rust/releases
 rust = use_extension("@rules_rust//rust:extensions.bzl", "rust")
 rust.toolchain(
     edition = RUST_EDITION,
-    extra_target_triples = [
-        "x86_64-unknown-linux-musl",
-        "aarch64-unknown-linux-musl",
-    ],
     versions = [RUST_VERSION],
+)
+
+# This overrides a default rust_repository_set created by rust_register_toolchain.
+# It must be named exactly this.
+# Each exec triple needs one of these calls per target triple it supports.
+# The first call needs all of the attrs, the subsequent calls should only set name, target_triple, and target_compatible_with.
+rust.repository_set(
+    name = "rust_linux_x86_64",
+    edition = RUST_EDITION,
+    exec_triple = "x86_64-unknown-linux-gnu",
+    target_compatible_with = [
+        "@//build/linker_config:unknown",
+        "@platforms//cpu:x86_64",
+        "@platforms//os:linux",
+    ],
+    target_triple = "x86_64-unknown-linux-gnu",
+    versions = [RUST_VERSION],
+)
+rust.repository_set(
+    name = "rust_linux_x86_64",
+    target_compatible_with = [
+        "@//build/linker_config:musl",
+        "@platforms//cpu:arm64",
+        "@platforms//os:linux",
+    ],
+    target_triple = "aarch64-unknown-linux-musl",
+)
+rust.repository_set(
+    name = "rust_linux_x86_64",
+    target_compatible_with = [
+        "@//build/linker_config:musl",
+        "@platforms//cpu:x86_64",
+        "@platforms//os:linux",
+    ],
+    target_triple = "x86_64-unknown-linux-musl",
+)
+
+# We don't need to register a repository_set for exec_triple == target_triple if we're not customising it in any way:
+# one will get registered by default.
+# But we do for the Linux case above, because we want to add the "@//build/linker_config:unknown" constraint in that case.
+rust.repository_set(
+    name = "rust_darwin_x86_64",
+    edition = RUST_EDITION,
+    exec_triple = "x86_64-apple-darwin",
+    target_compatible_with = [
+        "@//build/linker_config:musl",
+        "@platforms//cpu:x86_64",
+        "@platforms//os:linux",
+    ],
+    target_triple = "x86_64-unknown-linux-musl",
+    versions = [RUST_VERSION],
+)
+rust.repository_set(
+    name = "rust_darwin_aarch64",
+    edition = RUST_EDITION,
+    exec_triple = "aarch64-apple-darwin",
+    target_compatible_with = [
+        "@//build/linker_config:musl",
+        "@platforms//cpu:x86_64",
+        "@platforms//os:linux",
+    ],
+    target_triple = "x86_64-unknown-linux-musl",
+    versions = [RUST_VERSION],
+)
+rust.repository_set(
+    name = "rust_darwin_aarch64",
+    target_compatible_with = [
+        "@//build/linker_config:musl",
+        "@platforms//cpu:arm64",
+        "@platforms//os:linux",
+    ],
+    target_triple = "aarch64-unknown-linux-musl",
 )
 use_repo(rust, "rust_toolchains")
 
@@ -84,22 +118,19 @@ register_toolchains("@rust_toolchains//:all")
 # //thirdparty/BUILD.bazel
 
 ###############################################################################
+# MUSL toolchain #
+###############################################################################
+
+toolchains_musl = use_extension("@toolchains_musl//:toolchains_musl.bzl", "toolchains_musl", dev_dependency = True)
+toolchains_musl.config(
+    extra_target_compatible_with = ["@//build/linker_config:musl"],
+)
+
+###############################################################################
 # OCI base images  #
 ###############################################################################
 
 oci = use_extension("@rules_oci//oci:extensions.bzl", "oci")
-
-# https://github.com/GoogleContainerTools/distroless
-oci.pull(
-    name = "distroless",
-    digest = "sha256:e1065a1d58800a7294f74e67c32ec4146d09d6cbe471c1fa7ed456b2d2bf06e0",
-    image = "gcr.io/distroless/cc-debian12",
-    platforms = [
-        "linux/amd64",
-        "linux/arm64/v8",
-    ],
-)
-use_repo(oci, "distroless")
 
 # https://hub.docker.com/repository/docker/hansenmarvin/rust-scratch/general
 oci.pull(
@@ -113,6 +144,4 @@ oci.pull(
         "linux/arm64",
     ],
 )
-use_repo(oci,
- "distroless_linux_amd64", "distroless_linux_arm64_v8",
- "scratch", "scratch_linux_amd64", "scratch_linux_arm64")
+use_repo(oci, "scratch", "scratch_linux_amd64", "scratch_linux_arm64")

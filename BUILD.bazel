@@ -1,48 +1,22 @@
+load("@bazel_skylib//rules:build_test.bzl", "build_test")
+load("@rules_shell//shell:sh_test.bzl", "sh_test")
 load("@rules_oci//oci:defs.bzl", "oci_push")
 load("@rules_rust//rust:defs.bzl", "rust_binary", "rust_doc", "rust_doc_test")
 load("//:build/binary.bzl", "build_binary_opt")
 load("//:build/container.bzl", "build_multi_arch_image", "git_with_timestamp_tag")
 
-package(default_visibility = ["//visibility:public"])
-
 filegroup(
     name = "all",
     srcs = [
-        ":hello_world_aarch64",
         ":hello_world_host",
-        ":hello_world_x86_64",
+        ":hello_linux_x86_64_musl",
+        ":hello_linux_arm64_musl",
     ],
 )
 
 rust_binary(
     name = "hello_world_host",
     srcs = ["src/main.rs"],
-    deps = [
-        # External crates
-        "//thirdparty/crates:mimalloc",
-        "//thirdparty/crates:lz4-sys",
-        "//thirdparty/crates:diesel",
-        "//thirdparty/crates:tokio",
-    ],
-)
-
-rust_binary(
-    name = "hello_world_x86_64",
-    srcs = ["src/main.rs"],
-    platform = "//build/platforms:linux-x86_64",
-    deps = [
-        # External crates
-        "//thirdparty/crates:mimalloc",
-        "//thirdparty/crates:lz4-sys",
-        "//thirdparty/crates:diesel",
-        "//thirdparty/crates:tokio",
-    ],
-)
-
-rust_binary(
-    name = "hello_world_aarch64",
-    srcs = ["src/main.rs"],
-    platform = "//build/platforms:linux-aarch64",
     deps = [
         # External crates
         "//thirdparty/crates:mimalloc",
@@ -68,37 +42,65 @@ sh_test(
     ],
 )
 
+rust_binary(
+    name = "hello_linux_x86_64_musl",
+    srcs = ["src/main.rs"],
+    platform = "//build/platforms:linux_x86_64_musl",
+    deps = [
+        # External crates
+        "//thirdparty/crates:mimalloc",
+        "//thirdparty/crates:lz4-sys",
+        "//thirdparty/crates:diesel",
+        "//thirdparty/crates:tokio",
+    ],
+)
+
 # Test the for x86_64 architecture
 sh_test(
-    name = "test_linux_x86_64",
+    name = "test_hello_linux_x86_64_musl",
     srcs = ["test_platform.sh"],
     args = [
-        "$(rootpath :hello_world_x86_64)",
-        "x86_64",
+        "$(rootpath :hello_linux_x86_64_musl)",
+       "'ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), static-pie linked'",
     ],
     data = [
-        ":hello_world_x86_64",
+        ":hello_linux_x86_64_musl",
     ],
     deps = [
         "@bazel_tools//tools/bash/runfiles",
     ],
 )
 
+rust_binary(
+    name = "hello_linux_arm64_musl",
+    srcs = ["src/main.rs"],
+    platform = "//build/platforms:linux_arm64_musl",
+    deps = [
+        # External crates
+        "//thirdparty/crates:mimalloc",
+        "//thirdparty/crates:lz4-sys",
+        "//thirdparty/crates:diesel",
+        "//thirdparty/crates:tokio",
+    ],
+)
+
+
 # Test for ARM architecture
 sh_test(
-    name = "test_linux_arm64",
+    name = "test_hello_linux_arm64_musl",
     srcs = ["test_platform.sh"],
     args = [
-        "$(rootpath :hello_world_aarch64)",
-        "aarch64",
+        "$(rootpath :hello_linux_arm64_musl)",
+       "'ELF 64-bit LSB executable, ARM aarch64, version 1 (SYSV), statically linked'",
     ],
     data = [
-        ":hello_world_aarch64",
+        ":hello_linux_arm64_musl",
     ],
     deps = [
         "@bazel_tools//tools/bash/runfiles",
     ],
 )
+
 
 ###############################################################################
 # RUST RELEASE MODE OPTIMIZATION
@@ -124,6 +126,7 @@ build_binary_opt(
         "//thirdparty/crates:tokio",
     ],
 )
+
 
 ###############################################################################
 # Documentation
@@ -152,11 +155,10 @@ build_multi_arch_image(
     entry_point = "hello_world_bin",
     exposed_ports = [
         "7070",
-        "8080",
     ],
     platforms = [
-        "//build/platforms:linux-x86_64",
-        "//build/platforms:linux-aarch64",
+       "//build/platforms:linux_x86_64_musl",
+       "//build/platforms:linux_arm64_musl",
     ],
     visibility = ["//visibility:public"],
 )
@@ -164,4 +166,12 @@ build_multi_arch_image(
 git_with_timestamp_tag(
     name = "remote_tag",
     target = ":image_index",
+)
+
+oci_push(
+    name = "push",
+    image = ":image_index",
+    remote_tags = ":remote_tag",
+    repository = "my_registry/my_project/my_repo/my_image",
+    visibility = ["//visibility:public"],
 )
