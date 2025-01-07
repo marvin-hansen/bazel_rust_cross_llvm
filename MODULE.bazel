@@ -32,7 +32,7 @@ git_override(
 ###############################################################################
 RUST_EDITION = "2021"  # NOTE: 2024 will be released with Rust 1.86.0
 
-RUST_VERSION = "1.83.0"
+RUST_VERSION = "1.80.0"
 
 rust = use_extension("@rules_rust//rust:extensions.bzl", "rust")
 rust.toolchain(
