@@ -4,18 +4,19 @@ load("@rules_oci//oci:defs.bzl", "oci_push")
 load("@rules_rust//rust:defs.bzl", "rust_binary", "rust_doc", "rust_doc_test")
 load("//:build/binary.bzl", "build_binary_opt")
 load("//:build/container.bzl", "build_multi_arch_image", "git_with_timestamp_tag")
+load(":build/platform_transition.bzl", "platform_transition_binary")
 
 filegroup(
     name = "all",
     srcs = [
-        ":hello_world_host",
+        ":hello_world",
         ":hello_linux_x86_64_musl",
         ":hello_linux_arm64_musl",
     ],
 )
 
 rust_binary(
-    name = "hello_world_host",
+    name = "hello_world",
     srcs = ["src/main.rs"],
     deps = [
         # External crates
@@ -29,30 +30,23 @@ rust_binary(
 # Test if the host binary works.
 # Note, we cannot test for platform since Bazel determines the host platform automatically
 sh_test(
-    name = "test_hello_world_host",
+    name = "test_hello_world",
     srcs = ["test_hello_world.sh"],
     args = [
-        "$(rlocationpath :hello_world_host)",
+        "$(rlocationpath :hello_world)",
     ],
     data = [
-        ":hello_world_host",
+        ":hello_world",
     ],
     deps = [
         "@bazel_tools//tools/bash/runfiles",
     ],
 )
 
-rust_binary(
+platform_transition_binary(
     name = "hello_linux_x86_64_musl",
-    srcs = ["src/main.rs"],
+    binary = ":hello_world",
     platform = "//build/platforms:linux_x86_64_musl",
-    deps = [
-        # External crates
-        "//thirdparty/crates:mimalloc",
-        "//thirdparty/crates:lz4-sys",
-        "//thirdparty/crates:diesel",
-        "//thirdparty/crates:tokio",
-    ],
 )
 
 # Test the for x86_64 architecture
@@ -71,19 +65,11 @@ sh_test(
     ],
 )
 
-rust_binary(
+platform_transition_binary(
     name = "hello_linux_arm64_musl",
-    srcs = ["src/main.rs"],
+    binary = ":hello_world",
     platform = "//build/platforms:linux_arm64_musl",
-    deps = [
-        # External crates
-        "//thirdparty/crates:mimalloc",
-        "//thirdparty/crates:lz4-sys",
-        "//thirdparty/crates:diesel",
-        "//thirdparty/crates:tokio",
-    ],
 )
-
 
 # Test for ARM architecture
 sh_test(
