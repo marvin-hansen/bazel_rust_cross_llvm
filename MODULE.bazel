@@ -39,6 +39,7 @@ rust.toolchain(
     edition = RUST_EDITION,
     versions = [RUST_VERSION],
 )
+
 # This overrides a default rust_repository_set created by rust_register_toolchain.
 # It must be named exactly this.
 # Each exec triple needs one of these calls per target triple it supports.
@@ -55,7 +56,15 @@ rust.repository_set(
     target_triple = "x86_64-unknown-linux-gnu",
     versions = [RUST_VERSION],
 )
-
+rust.repository_set(
+    name = "rust_linux_x86_64",
+    target_compatible_with = [
+        "@//build/linker_config:musl",
+        "@platforms//cpu:arm64",
+        "@platforms//os:linux",
+    ],
+    target_triple = "aarch64-unknown-linux-musl",
+)
 rust.repository_set(
     name = "rust_linux_x86_64",
     target_compatible_with = [
@@ -64,16 +73,6 @@ rust.repository_set(
         "@platforms//os:linux",
     ],
     target_triple = "x86_64-unknown-linux-musl",
-)
-
-rust.repository_set(
-    name = "rust_linux_arm64",
-    target_compatible_with = [
-        "@//build/linker_config:musl",
-        "@platforms//cpu:arm64",
-        "@platforms//os:linux",
-    ],
-    target_triple = "aarch64-unknown-linux-musl",
 )
 
 # We don't need to register a repository_set for exec_triple == target_triple if we're not customising it in any way:
